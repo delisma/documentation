@@ -4,8 +4,7 @@
   "description": "Hydrogen's marketing and documentation site.",
   "main": "npm.js",
   "scripts": {
-    "dev": "npx gulp",
-    "build": "npx gulp build"
+    "migrate": "node ./migrate-changelog.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +21,8 @@
   },
   "browserslist": [
     "last 1 version and not dead"
-  ]
+  ],
+  "devDependencies": {
+    "fs": "0.0.1-security"
+  }
 }

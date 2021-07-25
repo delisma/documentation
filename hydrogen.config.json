@@ -11,42 +11,42 @@
   },
   "colors": [
     {
-      "name": "white",
+      "key": "white",
       "color": "rgb(255, 255, 255)",
       "opacity": false
     },
     {
-      "name": "black",
+      "key": "black",
       "color": "rgb(10, 10, 20)",
       "opacity": false
     },
     {
-      "name": "font",
+      "key": "font",
       "color": "rgb(50, 50, 50)",
       "opacity": false
     },
     {
-      "name": "theme-1",
+      "key": "theme-1",
       "color": "#9D5CFF",
       "opacity": true
     },
     {
-      "name": "theme-2",
+      "key": "theme-2",
       "color": "#FF5C6D",
       "opacity": false
     },
     {
-      "name": "theme-3",
+      "key": "theme-3",
       "color": "#BEFF5C",
       "opacity": false
     },
     {
-      "name": "theme-4",
+      "key": "theme-4",
       "color": "#5CFFEE",
       "opacity": false
     },
     {
-      "name": "theme-5",
+      "key": "theme-5",
       "color": "#F7B452",
       "opacity": false
     }
@@ -56,7 +56,7 @@
   },
   "fonts": [
     {
-      "name": "Gibson",
+      "key": "Gibson",
       "loadType": "webfont",
       "value": "canada-type-gibson, sans-serif"
     }
@@ -67,11 +67,11 @@
       "angle": "135deg",
       "colorStops": [
         {
-          "name": "1",
+          "key": "1",
           "color": "#9D5CFF"
         },
         {
-          "name": "2",
+          "key": "2",
           "color": "#FF5C6D"
         }
       ]

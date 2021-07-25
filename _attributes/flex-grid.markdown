@@ -16,9 +16,11 @@ options:
   - title: ALIGNMENT
     type: custom
     content: "<pre>
+      normal\n
       top\n
       middle\n
-      bottom
+      bottom\n
+      stretch
     </pre>"
   - title: EXPANSION
     type: custom
