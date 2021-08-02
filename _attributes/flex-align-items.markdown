@@ -20,6 +20,7 @@ options:
       center\n
       flex-end\n
       flex-start\n
+      normal\n
       stretch
     </pre>"
 examples:

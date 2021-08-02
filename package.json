@@ -4,8 +4,7 @@
   "description": "Hydrogen's marketing and documentation site.",
   "main": "npm.js",
   "scripts": {
-    "dev": "npx gulp",
-    "build": "npx gulp build"
+    "migrate": "node ./migrate-changelog.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +16,12 @@
     "url": "https://github.com/hydrogen-design-system/documentation/issues"
   },
   "homepage": "https://hydrogen.design",
-  "dependencies": {
-    "@hydrogen-design-system/hydrogen.css": "1.0.5"
-  },
+  "dependencies": {},
   "browserslist": [
     "last 1 version and not dead"
-  ]
+  ],
+  "devDependencies": {
+    "@hydrogen-design-system/hydrogen.css": "^1.1.1",
+    "fs": "0.0.1-security"
+  }
 }
