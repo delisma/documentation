@@ -26,12 +26,12 @@
   {% capture codeTitle %}<code>{{ option.title }}</code>{% endcapture %}
   {% if option.type == "color" %}
     {% capture colorContent %}
-      <p>Please see the <a href="#colors">color section</a> for how to use colors.</p>
+      <p>Please see the <a data-h2-font-color="b:h(theme-1)" href="#colors">color section</a> for how to use colors.</p>
     {% endcapture %}
     {% include components/accordion.html title=codeTitle content=colorContent %}
   {% elsif option.type == "media" %}
     {% capture mediaContent %}
-      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+      <p>Please see the <a data-h2-font-color="b:h(theme-1)" href="#mediaQueries">media query section</a> for how to use media queries.</p>
     {% endcapture %}
     {% include components/accordion.html title=codeTitle content=mediaContent %}
   {% elsif option.type == "whitespace" %}

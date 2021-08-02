@@ -16,13 +16,12 @@
     "url": "https://github.com/hydrogen-design-system/documentation/issues"
   },
   "homepage": "https://hydrogen.design",
-  "dependencies": {
-    "@hydrogen-design-system/hydrogen.css": "1.0.5"
-  },
+  "dependencies": {},
   "browserslist": [
     "last 1 version and not dead"
   ],
   "devDependencies": {
+    "@hydrogen-design-system/hydrogen.css": "^1.1.1",
     "fs": "0.0.1-security"
   }
 }

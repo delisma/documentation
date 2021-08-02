@@ -1,6 +1,6 @@
 {
-  "debug": true,
-  "mediaWarnings": false,
+  "debug": false,
+  "mediaWarnings": true,
   "folders": {
     "markup": [
       "_attributes",
@@ -52,7 +52,8 @@
     }
   ],
   "flexgrid": {
-    "enabled": true
+    "enabled": true,
+    "columns": 8
   },
   "fonts": [
     {
