@@ -46,7 +46,7 @@
               <pre>npm install @hydrogen-design-system/hydrogen.css --save-dev</pre>
               <p>After the installation completes, you can run:</p>
               <pre>npx h2-init</pre>
-              <p>The above command will prompt you to enter three folder locations: your markup folder, your scripts folder, and your styles/CSS folder. Simply enter the path from the root of your project (e.g. <code>src/my/markup</code>). Once you've submitted these paths, Hydrogen will automagically create a <code>hydrogen.config.json</code> file in the root of your project. <span data-h2-font-weight="b(600)" data-h2-font-color="b(theme-1)">This file will be where you can customize Hydrogen's settings and theme.</span></p>
+              <p>The above command will prompt you to enter three folder locations: your markup folder, your scripts folder, and your styles/CSS folder. Simply enter the path from the root of your project (e.g. <code>src/my/markup</code>). Once you've submitted these paths, Hydrogen will automagically create a <code>hydrogen.config.json</code> file in the root of your project. <span data-h2-font-weight="b(600)" data-h2-font-color="b(theme-1)">This file contains Hydrogen's default settings and will be where you can customize Hydrogen's settings and theme.</span></p>
               {% include heading-3.html name="Getting Started" id="usage" %}
               <p>In order to start using Hydrogen, you need to enable it on your project. <a data-h2-font-color="b:h(theme-1)" href="#commands" title="Learn more about compiling Hydrogen.">After compiling Hydrogen</a>, a complete CSS file will appear in your specified styles folder, so include this file in your page's <code>head</code> element.</p>
 <pre>&lt;head&gt;
@@ -54,7 +54,7 @@
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div data-h2-bg-color="b(black)"&gt;
-    &lt;span data-h2-font-color="b(theme-1)"&gt;My Hydrogen styles work here!&lt;/span&gt;
+    &lt;span data-h2-font-color="b(purple)"&gt;My Hydrogen styles work here!&lt;/span&gt;
   &lt;/div&gt;
 &lt;/body&gt;</pre>
               <p data-h2-margin="b(bottom, s)">Hydrogen contains a handful of basic reset and typography CSS that might affect your existing styles. You can find out more about these styles below if you're trying to determine what might be altering your project's original CSS.</p>
@@ -198,7 +198,7 @@ m (64em)
 l (100em)
 </pre>
               <p>Using a media query is simple:</p>
-              <pre>data-h2-bg-color="b(black) m(theme-1) l(theme-2)"</pre>
+              <pre>data-h2-bg-color="b(black) m(purple) l(red)"</pre>
               <p>Renders something like this (try resizing your screen!):</p>
               <div data-h2-bg-color="b(black) m(theme-1) l(theme-2)" data-h2-padding="b(all, l)" data-h2-margin="b(bottom, m)"></div>
               <p>If the built in media queries don't suit your needs, you can <a data-h2-font-color="b:h(theme-1)"href="#configMedia" title="Learn more about setting custom media values in your configuration file." data-h2-font-color="b:h(theme-1)">customize them</a> in your <code>hydrogen.config.json</code> file.</p>
@@ -244,7 +244,7 @@ blue
 pink
 </pre>
               <p>When colors are built in Hydrogen, a light and dark version of each colors is created, and there is the option for each one to enable automatic generation of opacity variations. Hydrogen's default colors have this opacity option disabled, but these can be extremely helpful if your application frequently uses variations in its UI.</p>
-              <p><span data-h2-font-color="b(theme-1)" data-h2-font-weight="b(600)">The simplest way to reference a color in a property argument is to simply use its name</span>: <code>data-h2-bg-color="b(purple)"</code>. Sometimes however, we want to tap into the automatically created lighter, darker, or transparent versions of a color, and to so, colors have some prefix and suffix syntax that can be optionally included:</p>
+              <p><span data-h2-font-color="b(theme-1)" data-h2-font-weight="b(600)">The simplest way to reference a color in a property argument is to simply use its name</span>: <code>data-h2-bg-color="b(purple)"</code>. Sometimes however, we want to tap into the automatically created lighter, darker, or transparent versions of a color, and to do so, colors have some prefix and suffix syntax that can be <a href="#configThemeColors" title="Learn more about enabling opacity on colors.">optionally included in the config file</a>:</p>
               <ul>
                 <li><code>[dark]COLOR</code> for light/dark versions</li>
                 <li><code>COLOR[.6]</code> for referencing an opacity</li>
@@ -306,10 +306,10 @@ xxl (5.0625rem)
               <p>These values can be used in any property that has a <code>WHITESPACE</code> argument.</p>
               {% include sections/commands.html %}
               {% include heading-2.html icon="🔨" name="Configuration and Themes" id="configuration"%}
-              <p>After running <code>npx h2-init</code>, a <code>hydrogen.config.json</code> file will be located in the root of your project. In this file, you can specify a variety of options that will modify how Hydrogen works and the theme it applies to its stylesheet.</p>
+              <p>After running <code>npx h2-init</code>, a <code>hydrogen.config.json</code> file will be located in the root of your project. In this file, you can edit Hydrogen's defaults or specify a variety of options that will modify how Hydrogen works and the theme it applies to its stylesheet.</p>
               {% include heading-3.html name="Functional Configuration" %}
               {% include heading-4.html name="Setting Up Project Folders" id="configFolders" %}
-              <p>If you have run <code>npx h2-init</code> these configuration lines are probably already set. These options indicate to Hydrogen where it should find your markup and scripts as well as where it should place its final CSS file.</p>
+              <p>If you have run <code>npx h2-init</code> these configuration lines are already set. These options indicate to Hydrogen where it should find your markup and scripts as well as where it should place its final CSS file.</p>
 <pre>"folders": {
   "markup": "path/to/markup/folder",
   "scripts": "path/to/scripts/folder",
@@ -369,7 +369,7 @@ xxl (5.0625rem)
 ]
 </pre>
               {% include heading-4.html name="Colors" id="configThemeColors" %}
-              <p>This setting allows you to theme Hydrogen's colors. The <code>name</code> value will be how you reference color in your attribute arguments, the <code>color</code> value will be the corresponding value in CSS and can accept RGB, RGBA, and HEX values, and finally, the <code>opacity</code> value can be set to true or false, which tells Hydrogen to build an opacity map for that color, so that it can be <a data-h2-font-color="b:h(theme-1)" href="#color" title="Learn more about how opacity works.">referenced using the opacity suffixes</a>. Below are the default values.</p>
+              <p>This setting allows you to theme Hydrogen's colors. The <code>name</code> value will be how you reference color in your attribute arguments, the <code>color</code> value will be the corresponding value in CSS and can accept RGB, RGBA, and HEX values, and finally, the <code>opacity</code> value can be set to true or false, which tells Hydrogen to build an opacity map for that color, so that it can be <a data-h2-font-color="b:h(theme-1)" href="#colors" title="Learn more about how opacity works.">referenced using the opacity suffixes</a>. It's recommended that <code>opacity</code> be set to <code>false</code> as a default to avoid bloating the compile time. Below are the default values.</p>
 <pre>
 "colors": [
   {

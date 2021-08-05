@@ -21,7 +21,7 @@
     "last 1 version and not dead"
   ],
   "devDependencies": {
-    "@hydrogen-design-system/hydrogen.css": "^1.1.1",
+    "@hydrogen-design-system/hydrogen.css": "^1.1.2",
     "fs": "0.0.1-security"
   }
 }
