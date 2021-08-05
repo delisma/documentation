@@ -188,6 +188,34 @@ li {
                 <li><code>:STATE</code>: this <strong>optional</strong> value allows you to set Hydrogen styles for a particular state on a handful of Hydrogen properties. <a data-h2-font-color="b:h(theme-1)" href="#states" title="Learn more about states in Hydrogen." data-h2-font-color="b:h(theme-1)">You can see a list of of available states and which properties they can be used with below.</a></li>
                 <li><code>ARGUMENTS</code>: each property has its own special set of arguments, outlined in the documentation below, that will define how the element is styled.</li>
               </ul>
+              <div
+                data-h2-bg-color="b(theme-1[.1])"
+                data-h2-font-color="b(theme-1)"
+                data-h2-border="b(theme-1, all, solid, s)"
+                data-h2-padding="b(right-left, s)"
+                data-h2-radius="b(s)"
+                data-h2-margin="b(top-bottom, m)">
+                <p 
+                  data-h2-font-color="b(theme-1)"
+                  data-h2-font-weight="b(600)">💡 Using Hydrogen with a JavaScript Library?</p>
+                <p data-h2-font-color="b(theme-1)">It's important that you use Hydrogen attributes in their entirety so that Hydrogen can properly understand which attributes it needs to include in your final CSS file. This means you need to avoid using variables or props inside of an attribute. Rather, it's recommended that you include the attribute itself as the variable or prop. <a href="https://github.com/hydrogen-design-system/hydrogen.css/issues/7" title="View this issue on Github." target="_blank" rel="noreferrer">We consider this a bug, and you can see discussion on it here.</a></p>
+              </div>
+              <div data-h2-flex-grid="b(top, expanded, flush, m)">
+                <div data-h2-flex-item="b(1of1) m(1of2)">
+                  ✅ <span data-h2-font-weight="b(600)">Do this:</span>
+<pre>var myAttribute = "data-h2-bg-color='b(red)'"
+...
+div myAttribute
+</pre>
+                </div>
+                <div data-h2-flex-item="b(1of1) m(1of2)">
+                  🚫 <span data-h2-font-weight="b(600)">Don't do this:</span>
+<pre>var myVar = "red"
+...
+div data-h2-bg-color="b(myVar)"
+</pre>
+                </div>
+              </div>
               {% include heading-3.html name="Media Queries" id="mediaQueries" %}
               <p>Media queries in Hydrogen are designed to allow you to granularly control each property when you need it. Rather than being forced to write unique styles for a particular element, you can directly target that element's property at the exact query you need right in your markup.</p>
               <p>Hydrogen comes with a default set of 4 media queries out of the box:</p>
