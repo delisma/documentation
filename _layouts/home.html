@@ -271,8 +271,8 @@ purple
 blue
 pink
 </pre>
-              <p>When colors are built in Hydrogen, a light and dark version of each colors is created, and there is the option for each one to enable automatic generation of opacity variations. Hydrogen's default colors have this opacity option disabled, but these can be extremely helpful if your application frequently uses variations in its UI.</p>
-              <p><span data-h2-font-color="b(theme-1)" data-h2-font-weight="b(600)">The simplest way to reference a color in a property argument is to simply use its name</span>: <code>data-h2-bg-color="b(purple)"</code>. Sometimes however, we want to tap into the automatically created lighter, darker, or transparent versions of a color, and to do so, colors have some prefix and suffix syntax that can be <a href="#configThemeColors" title="Learn more about enabling opacity on colors.">optionally included in the config file</a>:</p>
+              <p>When colors are built in Hydrogen, a light and dark version of each colors is created, and there is the option to add opacity variations for each. By default, Hydrogen won't generate any opacity variations, but you can add as many as you need for your project.</p>
+              <p><span data-h2-font-color="b(theme-1)" data-h2-font-weight="b(600)">The simplest way to reference a color in a property argument is to simply use its name</span>: <code>data-h2-bg-color="b(purple)"</code>. Sometimes however, we want to tap into the automatically created lighter, darker, or custom opacity values, and to do so, colors have some prefix and suffix syntax that can be <a href="#configThemeColors" title="Learn more about enabling opacity on colors.">optionally included in the config file</a>:</p>
               <ul>
                 <li><code>[dark]COLOR</code> for light/dark versions</li>
                 <li><code>COLOR[.6]</code> for referencing an opacity</li>
@@ -283,23 +283,13 @@ pink
 <pre>
 light
 dark
-
-
-
-
-
 </pre>
                 </div>
                 <div data-h2-flex-item="b(1of1) m(1of2)">
                   <p>For referencing opacity values when you've enabled them, you can use the following increments:</p>
 <pre>
-0
-.1
-.2
-...
-.8
-.9
-1
+decimal (0.4, .67)
+percentage (20%)
 </pre>
                 </div>
               </div>
@@ -397,35 +387,36 @@ xxl (5.0625rem)
 ]
 </pre>
               {% include heading-4.html name="Colors" id="configThemeColors" %}
-              <p>This setting allows you to theme Hydrogen's colors. The <code>name</code> value will be how you reference color in your attribute arguments, the <code>color</code> value will be the corresponding value in CSS and can accept RGB, RGBA, and HEX values, and finally, the <code>opacity</code> value can be set to true or false, which tells Hydrogen to build an opacity map for that color, so that it can be <a data-h2-font-color="b:h(theme-1)" href="#colors" title="Learn more about how opacity works.">referenced using the opacity suffixes</a>. It's recommended that <code>opacity</code> be set to <code>false</code> as a default to avoid bloating the compile time. Below are the default values.</p>
+              <p>This setting allows you to theme Hydrogen's colors. The <code>name</code> value will be how you reference color in your attribute arguments, the <code>color</code> value will be the corresponding value in CSS and can accept RGB, RGBA, and HEX values, and finally, the <code>opacities</code> array can be passed either decimal values or percentages, which tells Hydrogen to build an opacity variant for that color, so that it can be <a data-h2-font-color="b:h(theme-1)" href="#colors" title="Learn more about how opacity works.">referenced using the opacity suffixes</a>. Below are the default values.</p>
 <pre>
 "colors": [
   {
     "key": "white",
     "color": "rgba(255, 255, 255, 1)",
-    "opacity": false
+    "opacities": [
+      ".2"
+    ]
   },
   {
     "key": "black",
-    "color": "rgba(20, 20, 30, 1)",
-    "opacity": false
+    "color": "rgba(20, 20, 30, 1)"
   },
   {
     "key": "purple",
     "color": "#9D5CFF",
-    "opacity": false
+    "opacities": [
+      ".1"
+    ]
   },
   {
     "key": "blue",
-    "color": "#5CFFEE",
-    "opacity": false
+    "color": "#5CFFEE"
   },
   {
     "key": "pink",
-    "color": "#FF5C6D",
-    "opacity": false
+    "color": "#FF5C6D"
   }
-]
+],
 </pre>
               {% include heading-4.html name="Containers" id="configThemeContainers" %}
               <p>This setting allows you to create custom container widths. The <code>name</code> value will be how you reference widths in your attribute arguments, while the <code>maxWidth</code> value will be the container's maximum width. Hydrogen will automatically generate alignments for all of your containers. Below are the default values.</p>
