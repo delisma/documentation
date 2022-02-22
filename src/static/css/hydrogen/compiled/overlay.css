@@ -1,0 +1,2429 @@
+[data-h2-overlay*="MEDIAKEY(transparent)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY(transparent)"]::before {
+  background-color: rgba(255, 255, 255, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY(transparent)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([light]transparent)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([light]transparent)"]::before {
+  background-color: rgba(255, 255, 255, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([light]transparent)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([dark]transparent)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([dark]transparent)"]::before {
+  background-color: rgba(128, 128, 128, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([dark]transparent)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY(white)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY(white)"]::before {
+  background-color: white;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY(white)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([light]white)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([light]white)"]::before {
+  background-color: white;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([light]white)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([dark]white)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([dark]white)"]::before {
+  background-color: gray;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([dark]white)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY(white[.2])"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY(white[.2])"]::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY(white[.2])"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([light]white[.2])"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([light]white[.2])"]::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([light]white[.2])"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([dark]white[.2])"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([dark]white[.2])"]::before {
+  background-color: rgba(128, 128, 128, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([dark]white[.2])"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY(black)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY(black)"]::before {
+  background-color: #14141e;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY(black)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([light]black)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([light]black)"]::before {
+  background-color: #7575a3;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([light]black)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([dark]black)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([dark]black)"]::before {
+  background-color: #0a0a0f;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([dark]black)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY(black[.8])"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY(black[.8])"]::before {
+  background-color: rgba(20, 20, 30, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY(black[.8])"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([light]black[.8])"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([light]black[.8])"]::before {
+  background-color: rgba(117, 117, 163, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([light]black[.8])"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([dark]black[.8])"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([dark]black[.8])"]::before {
+  background-color: rgba(10, 10, 15, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([dark]black[.8])"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY(primary)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY(primary)"]::before {
+  background-color: #9D5CFF;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY(primary)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([light]primary)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([light]primary)"]::before {
+  background-color: #d7bdff;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([light]primary)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([dark]primary)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([dark]primary)"]::before {
+  background-color: #36106e;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([dark]primary)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY(primary[.1])"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY(primary[.1])"]::before {
+  background-color: rgba(157, 92, 255, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY(primary[.1])"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([light]primary[.1])"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([light]primary[.1])"]::before {
+  background-color: rgba(215, 189, 255, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([light]primary[.1])"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([dark]primary[.1])"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([dark]primary[.1])"]::before {
+  background-color: rgba(54, 16, 110, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([dark]primary[.1])"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY(secondary)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY(secondary)"]::before {
+  background-color: #5CFFEE;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY(secondary)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([light]secondary)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([light]secondary)"]::before {
+  background-color: #aefff7;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([light]secondary)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([dark]secondary)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([dark]secondary)"]::before {
+  background-color: #00ae9b;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([dark]secondary)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY(accent)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY(accent)"]::before {
+  background-color: #FF5C6D;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY(accent)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([light]accent)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([light]accent)"]::before {
+  background-color: #ffaeb6;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([light]accent)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY([dark]accent)"] {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY([dark]accent)"]::before {
+  background-color: #ae0012;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY([dark]accent)"] > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a(transparent)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a(transparent)"]:active::before {
+  background-color: rgba(255, 255, 255, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a(transparent)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([light]transparent)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]transparent)"]:active::before {
+  background-color: rgba(255, 255, 255, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]transparent)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([dark]transparent)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]transparent)"]:active::before {
+  background-color: rgba(128, 128, 128, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]transparent)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a(white)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a(white)"]:active::before {
+  background-color: white;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a(white)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([light]white)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]white)"]:active::before {
+  background-color: white;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]white)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([dark]white)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]white)"]:active::before {
+  background-color: gray;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]white)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a(white[.2])"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a(white[.2])"]:active::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a(white[.2])"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([light]white[.2])"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]white[.2])"]:active::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]white[.2])"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([dark]white[.2])"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]white[.2])"]:active::before {
+  background-color: rgba(128, 128, 128, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]white[.2])"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a(black)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a(black)"]:active::before {
+  background-color: #14141e;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a(black)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([light]black)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]black)"]:active::before {
+  background-color: #7575a3;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]black)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([dark]black)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]black)"]:active::before {
+  background-color: #0a0a0f;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]black)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a(black[.8])"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a(black[.8])"]:active::before {
+  background-color: rgba(20, 20, 30, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a(black[.8])"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([light]black[.8])"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]black[.8])"]:active::before {
+  background-color: rgba(117, 117, 163, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]black[.8])"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([dark]black[.8])"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]black[.8])"]:active::before {
+  background-color: rgba(10, 10, 15, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]black[.8])"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a(primary)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a(primary)"]:active::before {
+  background-color: #9D5CFF;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a(primary)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([light]primary)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]primary)"]:active::before {
+  background-color: #d7bdff;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]primary)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([dark]primary)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]primary)"]:active::before {
+  background-color: #36106e;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]primary)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a(primary[.1])"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a(primary[.1])"]:active::before {
+  background-color: rgba(157, 92, 255, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a(primary[.1])"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([light]primary[.1])"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]primary[.1])"]:active::before {
+  background-color: rgba(215, 189, 255, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]primary[.1])"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([dark]primary[.1])"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]primary[.1])"]:active::before {
+  background-color: rgba(54, 16, 110, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]primary[.1])"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a(secondary)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a(secondary)"]:active::before {
+  background-color: #5CFFEE;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a(secondary)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([light]secondary)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]secondary)"]:active::before {
+  background-color: #aefff7;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]secondary)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([dark]secondary)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]secondary)"]:active::before {
+  background-color: #00ae9b;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]secondary)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a(accent)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a(accent)"]:active::before {
+  background-color: #FF5C6D;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a(accent)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([light]accent)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]accent)"]:active::before {
+  background-color: #ffaeb6;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([light]accent)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:a([dark]accent)"]:active {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]accent)"]:active::before {
+  background-color: #ae0012;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:a([dark]accent)"]:active > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h(transparent)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h(transparent)"]:hover::before {
+  background-color: rgba(255, 255, 255, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h(transparent)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([light]transparent)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]transparent)"]:hover::before {
+  background-color: rgba(255, 255, 255, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]transparent)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([dark]transparent)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]transparent)"]:hover::before {
+  background-color: rgba(128, 128, 128, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]transparent)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h(white)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h(white)"]:hover::before {
+  background-color: white;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h(white)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([light]white)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]white)"]:hover::before {
+  background-color: white;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]white)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([dark]white)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]white)"]:hover::before {
+  background-color: gray;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]white)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h(white[.2])"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h(white[.2])"]:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h(white[.2])"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([light]white[.2])"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]white[.2])"]:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]white[.2])"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([dark]white[.2])"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]white[.2])"]:hover::before {
+  background-color: rgba(128, 128, 128, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]white[.2])"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h(black)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h(black)"]:hover::before {
+  background-color: #14141e;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h(black)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([light]black)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]black)"]:hover::before {
+  background-color: #7575a3;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]black)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([dark]black)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]black)"]:hover::before {
+  background-color: #0a0a0f;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]black)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h(black[.8])"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h(black[.8])"]:hover::before {
+  background-color: rgba(20, 20, 30, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h(black[.8])"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([light]black[.8])"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]black[.8])"]:hover::before {
+  background-color: rgba(117, 117, 163, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]black[.8])"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([dark]black[.8])"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]black[.8])"]:hover::before {
+  background-color: rgba(10, 10, 15, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]black[.8])"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h(primary)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h(primary)"]:hover::before {
+  background-color: #9D5CFF;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h(primary)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([light]primary)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]primary)"]:hover::before {
+  background-color: #d7bdff;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]primary)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([dark]primary)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]primary)"]:hover::before {
+  background-color: #36106e;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]primary)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h(primary[.1])"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h(primary[.1])"]:hover::before {
+  background-color: rgba(157, 92, 255, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h(primary[.1])"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([light]primary[.1])"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]primary[.1])"]:hover::before {
+  background-color: rgba(215, 189, 255, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]primary[.1])"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([dark]primary[.1])"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]primary[.1])"]:hover::before {
+  background-color: rgba(54, 16, 110, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]primary[.1])"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h(secondary)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h(secondary)"]:hover::before {
+  background-color: #5CFFEE;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h(secondary)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([light]secondary)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]secondary)"]:hover::before {
+  background-color: #aefff7;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]secondary)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([dark]secondary)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]secondary)"]:hover::before {
+  background-color: #00ae9b;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]secondary)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h(accent)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h(accent)"]:hover::before {
+  background-color: #FF5C6D;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h(accent)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([light]accent)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]accent)"]:hover::before {
+  background-color: #ffaeb6;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([light]accent)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:h([dark]accent)"]:hover {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]accent)"]:hover::before {
+  background-color: #ae0012;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:h([dark]accent)"]:hover > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f(transparent)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f(transparent)"]:focus::before {
+  background-color: rgba(255, 255, 255, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f(transparent)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([light]transparent)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]transparent)"]:focus::before {
+  background-color: rgba(255, 255, 255, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]transparent)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([dark]transparent)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]transparent)"]:focus::before {
+  background-color: rgba(128, 128, 128, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]transparent)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f(white)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f(white)"]:focus::before {
+  background-color: white;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f(white)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([light]white)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]white)"]:focus::before {
+  background-color: white;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]white)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([dark]white)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]white)"]:focus::before {
+  background-color: gray;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]white)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f(white[.2])"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f(white[.2])"]:focus::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f(white[.2])"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([light]white[.2])"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]white[.2])"]:focus::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]white[.2])"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([dark]white[.2])"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]white[.2])"]:focus::before {
+  background-color: rgba(128, 128, 128, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]white[.2])"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f(black)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f(black)"]:focus::before {
+  background-color: #14141e;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f(black)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([light]black)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]black)"]:focus::before {
+  background-color: #7575a3;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]black)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([dark]black)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]black)"]:focus::before {
+  background-color: #0a0a0f;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]black)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f(black[.8])"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f(black[.8])"]:focus::before {
+  background-color: rgba(20, 20, 30, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f(black[.8])"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([light]black[.8])"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]black[.8])"]:focus::before {
+  background-color: rgba(117, 117, 163, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]black[.8])"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([dark]black[.8])"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]black[.8])"]:focus::before {
+  background-color: rgba(10, 10, 15, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]black[.8])"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f(primary)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f(primary)"]:focus::before {
+  background-color: #9D5CFF;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f(primary)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([light]primary)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]primary)"]:focus::before {
+  background-color: #d7bdff;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]primary)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([dark]primary)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]primary)"]:focus::before {
+  background-color: #36106e;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]primary)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f(primary[.1])"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f(primary[.1])"]:focus::before {
+  background-color: rgba(157, 92, 255, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f(primary[.1])"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([light]primary[.1])"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]primary[.1])"]:focus::before {
+  background-color: rgba(215, 189, 255, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]primary[.1])"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([dark]primary[.1])"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]primary[.1])"]:focus::before {
+  background-color: rgba(54, 16, 110, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]primary[.1])"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f(secondary)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f(secondary)"]:focus::before {
+  background-color: #5CFFEE;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f(secondary)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([light]secondary)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]secondary)"]:focus::before {
+  background-color: #aefff7;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]secondary)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([dark]secondary)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]secondary)"]:focus::before {
+  background-color: #00ae9b;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]secondary)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f(accent)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f(accent)"]:focus::before {
+  background-color: #FF5C6D;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f(accent)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([light]accent)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]accent)"]:focus::before {
+  background-color: #ffaeb6;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([light]accent)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:f([dark]accent)"]:focus {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]accent)"]:focus::before {
+  background-color: #ae0012;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:f([dark]accent)"]:focus > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d(transparent)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d(transparent)"]:disabled::before {
+  background-color: rgba(255, 255, 255, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d(transparent)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([light]transparent)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]transparent)"]:disabled::before {
+  background-color: rgba(255, 255, 255, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]transparent)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([dark]transparent)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]transparent)"]:disabled::before {
+  background-color: rgba(128, 128, 128, 0);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]transparent)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d(white)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d(white)"]:disabled::before {
+  background-color: white;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d(white)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([light]white)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]white)"]:disabled::before {
+  background-color: white;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]white)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([dark]white)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]white)"]:disabled::before {
+  background-color: gray;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]white)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d(white[.2])"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d(white[.2])"]:disabled::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d(white[.2])"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([light]white[.2])"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]white[.2])"]:disabled::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]white[.2])"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([dark]white[.2])"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]white[.2])"]:disabled::before {
+  background-color: rgba(128, 128, 128, 0.2);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]white[.2])"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d(black)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d(black)"]:disabled::before {
+  background-color: #14141e;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d(black)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([light]black)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]black)"]:disabled::before {
+  background-color: #7575a3;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]black)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([dark]black)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]black)"]:disabled::before {
+  background-color: #0a0a0f;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]black)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d(black[.8])"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d(black[.8])"]:disabled::before {
+  background-color: rgba(20, 20, 30, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d(black[.8])"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([light]black[.8])"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]black[.8])"]:disabled::before {
+  background-color: rgba(117, 117, 163, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]black[.8])"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([dark]black[.8])"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]black[.8])"]:disabled::before {
+  background-color: rgba(10, 10, 15, 0.8);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]black[.8])"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d(primary)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d(primary)"]:disabled::before {
+  background-color: #9D5CFF;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d(primary)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([light]primary)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]primary)"]:disabled::before {
+  background-color: #d7bdff;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]primary)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([dark]primary)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]primary)"]:disabled::before {
+  background-color: #36106e;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]primary)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d(primary[.1])"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d(primary[.1])"]:disabled::before {
+  background-color: rgba(157, 92, 255, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d(primary[.1])"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([light]primary[.1])"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]primary[.1])"]:disabled::before {
+  background-color: rgba(215, 189, 255, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]primary[.1])"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([dark]primary[.1])"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]primary[.1])"]:disabled::before {
+  background-color: rgba(54, 16, 110, 0.1);
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]primary[.1])"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d(secondary)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d(secondary)"]:disabled::before {
+  background-color: #5CFFEE;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d(secondary)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([light]secondary)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]secondary)"]:disabled::before {
+  background-color: #aefff7;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]secondary)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([dark]secondary)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]secondary)"]:disabled::before {
+  background-color: #00ae9b;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]secondary)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d(accent)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d(accent)"]:disabled::before {
+  background-color: #FF5C6D;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d(accent)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([light]accent)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]accent)"]:disabled::before {
+  background-color: #ffaeb6;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([light]accent)"]:disabled > * {
+  position: relative;
+}
+
+[data-h2-overlay*="MEDIAKEY:d([dark]accent)"]:disabled {
+  position: relative;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]accent)"]:disabled::before {
+  background-color: #ae0012;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-h2-overlay*="MEDIAKEY:d([dark]accent)"]:disabled > * {
+  position: relative;
+}

@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+---
+<h1>{{ home[locale].hero.title }}</h1>
+<p>{{ home[locale].hero.tagline }}</p>
+{% for item in home[locale].mainFeatures %}
+  <p>{{ item.title }}</p>
+  <ul>
+    {% for item in item.content %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+<h2>{{ home[locale].otherFeatures.title }}</h2>
+{% for item in home[locale].otherFeatures.features %}
+  <p>{{ item.title }}</p>
+  <ul>
+    {% for item in item.content %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  <a
+    title="{{ item.link.title }}"
+    href="{{ locale }}/{{ item.link.route }}"
+    target="_blank"
+    referrer="norel">{{ item.link.label }}</a>
+{% endfor %}
+<hr>
+<h2>{{ home[locale].quickStart.title }}</h2>
+<a
+  title="{{ home[locale].quickStart.link.title }}"
+  href="{{ locale }}/{{ home[locale].quickStart.link.route }}"
+  target="_blank"
+  referrer="norel">{{ home[locale].quickStart.link.label }}</a>
+<p>{{ home[locale].quickStart.subtitle }}</p>
+{% for item in home[locale].quickStart.content %}
+  {% for item in item.copy %}
+    <p>{{ item }}</p>
+  {% endfor %}
+  {% for item in item.code %}
+    <pre>{{ item }}</pre>
+  {% endfor %}
+{% endfor %}
+<hr>
+<h2>{{ home[locale].find.title }}</h2>
+<a
+  title="{{ home[locale].find.link.title }}"
+  href="{{ locale }}/{{ home[locale].find.link.route }}"
+  target="_blank"
+  referrer="norel">{{ home[locale].find.link.label }}</a>
+<div>
+  {% for propertyType in properties.types %}
+    <p>{{ propertyType[locale].title }} {{ home[locale].find.propertyLabel }}</p>
+    {% set properties = collections["properties_" + locale] %}
+    {% for item in properties %}
+      {% if item.data.type == propertyType.key %}
+        {% if loop.first %}<ul>{% endif %}
+        <li>
+          <a
+            title="{{ home[locale].find.propertyLinkTitle }} {{ item.data.name[locale] }}."
+            href="{{ item.data.permalink }}">{{ item.data.key }}</a>
+        </li>
+        {% if loop.last %}</ul>{% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</div>

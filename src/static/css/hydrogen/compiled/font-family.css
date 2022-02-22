@@ -1,0 +1,15 @@
+[data-h2-font-family*="MEDIAKEY(sans)"] {
+  font-family: sans-serif;
+}
+
+[data-h2-font-family*="MEDIAKEY(serif)"] {
+  font-family: serif;
+}
+
+[data-h2-font-family*="MEDIAKEY(script)"] {
+  font-family: script;
+}
+
+[data-h2-font-family*="MEDIAKEY(mono)"] {
+  font-family: monospace;
+}
