@@ -1,82 +1,287 @@
 {
   "debug": false,
-  "mediaWarnings": true,
-  "folders": {
-    "markup": [
-      "_attributes",
-      "_layouts",
-      "_includes"
-    ],
-    "scripts": "assets/scripts",
-    "styles": "assets/styles"
+  "mediaWarnings": false,
+  "input": "src/_includes",
+  "output": "src/static/css",
+  "variables": {
+    "css": {
+      "enabled": false
+    },
+    "sass": {
+      "enabled": false
+    }
   },
+  "borderWeights": [
+    {
+      "key": "1px",
+      "weight": "1px"
+    },
+    {
+      "key": ".5rem",
+      "weight": ".5rem"
+    },
+    {
+      "key": "1rem",
+      "weight": "1rem"
+    }
+  ],
   "colors": [
     {
+      "key": "transparent",
+      "color": "rgba(255, 255, 255, 0)",
+      "variants": {
+        "enabled": false
+      },
+      "opacities": []
+    },
+    {
       "key": "white",
-      "color": "rgb(255, 255, 255)",
-      "opacity": false
+      "color": "rgba(255, 255, 255, 1)",
+      "variants": {
+        "enabled": true,
+        "dark": "#F3F3F9"
+      },
+      "opacities": [
+        ".2"
+      ]
     },
     {
       "key": "black",
-      "color": "rgb(10, 10, 20)",
-      "opacity": false
+      "color": "#212130",
+      "variants": {
+        "enabled": true,
+        "light": "#2B2D3E"
+      },
+      "opacities": [
+        ".8"
+      ]
     },
     {
-      "key": "font",
-      "color": "rgb(50, 50, 50)",
-      "opacity": false
-    },
-    {
-      "key": "theme-1",
+      "key": "primary",
       "color": "#9D5CFF",
-      "opacity": true
+      "variants": {
+        "enabled": true,
+        "light": "#D7BDFF",
+        "dark": "#36106e"
+      },
+      "opacities": [
+        ".1"
+      ]
     },
     {
-      "key": "theme-2",
-      "color": "#FF5C6D",
-      "opacity": false
+      "key": "accent",
+      "color": "#53FFE0",
+      "variants": {
+        "enabled": false
+      },
+      "opacities": []
+    }
+  ],
+  "containers": [
+    {
+      "key": "s",
+      "maxWidth": "39rem"
     },
     {
-      "key": "theme-3",
-      "color": "#BEFF5C",
-      "opacity": false
+      "key": "m",
+      "maxWidth": "60rem"
     },
     {
-      "key": "theme-4",
-      "color": "#5CFFEE",
-      "opacity": false
-    },
-    {
-      "key": "theme-5",
-      "color": "#F7B452",
-      "opacity": false
+      "key": "l",
+      "maxWidth": "80rem"
     }
   ],
   "flexgrid": {
     "enabled": true,
-    "columns": 8
+    "columns": 12
   },
   "fonts": [
     {
-      "key": "Gibson",
+      "key": "sans",
       "loadType": "webfont",
-      "value": "canada-type-gibson, sans-serif"
+      "value": "'Inter', sans-serif",
+      "url": null
+    },
+    {
+      "key": "serif",
+      "loadType": "system",
+      "value": "serif",
+      "url": null
+    },
+    {
+      "key": "script",
+      "loadType": "system",
+      "value": "script",
+      "url": null
+    },
+    {
+      "key": "mono",
+      "loadType": "system",
+      "value": "monospace",
+      "url": null
     }
   ],
+  "fontBaseSize": "112.5%",
+  "fontScale": "1.33",
   "gradients": [
     {
+      "key": "divider",
       "type": "linear",
-      "angle": "135deg",
+      "angle": "90deg",
       "colorStops": [
-        {
-          "key": "1",
-          "color": "#9D5CFF"
-        },
-        {
-          "key": "2",
-          "color": "#FF5C6D"
-        }
+        "#53FFE0",
+        "#9D5CFF"
       ]
+    },
+    {
+      "key": "primaryRadial",
+      "type": "radial",
+      "colorStops": [
+        "rgba(157,92,255, 1)",
+        "rgba(42, 44, 61, 1)"
+      ]
+    },
+    {
+      "key": "accentRadial",
+      "type": "radial",
+      "colorStops": [
+        "rgba(83, 255, 224, 1)",
+        "rgba(42, 44, 61, 1)"
+      ]
+    }
+  ],
+  "heights": [
+    {
+      "key": "100",
+      "value": "100%"
+    },
+    {
+      "key": "75",
+      "value": "75%"
+    },
+    {
+      "key": "50",
+      "value": "50%"
+    },
+    {
+      "key": "25",
+      "value": "25%"
+    },
+    {
+      "key": "0",
+      "value": "0"
+    }
+  ],
+  "layerCount": 5,
+  "media": [
+    {
+      "key": "xs",
+      "value": "screen and (min-width: 25em)"
+    },
+    {
+      "key": "s",
+      "value": "screen and (min-width: 50em)"
+    },
+    {
+      "key": "m",
+      "value": "screen and (min-width: 64em)"
+    },
+    {
+      "key": "l",
+      "value": "screen and (min-width: 100em)"
+    }
+  ],
+  "opacities": [
+    {
+      "key": "0",
+      "value": "0"
+    },
+    {
+      "key": ".5",
+      "value": ".5"
+    },
+    {
+      "key": "1",
+      "value": "1"
+    }
+  ],
+  "radius": [
+    {
+      "key": "rounded",
+      "value": "5px"
+    },
+    {
+      "key": "pill",
+      "value": "50rem"
+    },
+    {
+      "key": "circle",
+      "value": "100%"
+    }
+  ],
+  "shadows": [
+    {
+      "key": "xs",
+      "value": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "s",
+      "value": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "m",
+      "value": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "l",
+      "value": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "xl",
+      "value": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2)"
+    }
+  ],
+  "whitespaceScale": "1.5",
+  "widths": [
+    {
+      "key": "100",
+      "value": "100%"
+    },
+    {
+      "key": "90",
+      "value": "90%"
+    },
+    {
+      "key": "85",
+      "value": "85%"
+    },
+    {
+      "key": "75",
+      "value": "75%"
+    },
+    {
+      "key": "70",
+      "value": "70%"
+    },
+    {
+      "key": "50",
+      "value": "50%"
+    },
+    {
+      "key": "33",
+      "value": "33.33%"
+    },
+    {
+      "key": "25",
+      "value": "25%"
+    },
+    {
+      "key": "15",
+      "value": "15%"
+    },
+    {
+      "key": "0",
+      "value": "0"
     }
   ]
 }

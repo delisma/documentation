@@ -1,8 +1,8 @@
+_site/
+_tmp/
 .DS_Store
-node_modules
-cache/**/*
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+node_modules/
+.vscode/
+*git/
+package-lock.json
+.env

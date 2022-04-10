@@ -1,0 +1,94 @@
+<div
+    data-h2-container="b(center, l)"
+    data-h2-margin="b(top, xxl)"
+    data-h2-padding="b(right-left, l) m(right-left, xxl)">
+  <div
+    data-h2-text-align="b(center) m(left)" 
+    data-h2-flex-grid="b(middle, expanded, flush, m)">
+    <div data-h2-flex-item="b(1of1) m(1of12)">
+      <img 
+        src="/static/img/icon-flag.svg" 
+        alt="{{ home[locale].start.iconAlt }}" 
+        data-h2-width="b(25) s(15) m(90)"
+        data-h2-display="b(inline-block)"
+        data-h2-margin="b(bottom, s) m(bottom, none)"
+        class="section-icon">
+    </div>
+    <div data-h2-flex-item="b(1of1) m(auto)">
+      <h2
+        data-h2-margin="b(all, none)"
+        data-h2-font-color="b([light]black) b:dark(white)"
+        data-h2-font-weight="b(800)">{{ home[locale].start.title }}</h2>
+    </div>
+    <div data-h2-flex-item="b(1of1) m(content)">
+      <a 
+        href="{{ home[locale].start.titleLink.url }}"
+        title="{{ home[locale].start.titleLink.title }}"
+        data-h2-font-weight="b(300)"
+        data-h2-font-color="b([light]black) b:dark(white) b:h(primary)"
+        data-h2-font-size="b(h5)">{{ home[locale].start.titleLink.label }}</a>
+    </div>  
+  </div>
+  <div data-h2-margin="b(top, xl) m(bottom, s)">
+    <div data-h2-flex-grid="b(top, expanded, flush, m)">
+      <div 
+        data-h2-flex-item="b(1of1) m(1of12)"
+        data-h2-align-self="b(center)">
+          <div
+            data-h2-width="b(25) m(85)"
+            data-h2-height="b(xxs)"
+            data-h2-bg-color="b(primary) b:dark(accent)"
+            data-h2-radius="b(pill)"></div>
+        </div>
+      <div data-h2-flex-item="b(1of1) m(11of12)">
+        <p 
+          data-h2-margin="b(all, none)"
+          data-h2-font-weight="b(800)"
+          data-h2-font-color="b([light]black) b:dark(white)"
+          data-h2-font-size="b(h6)">{{ home[locale].start.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+  {% for item in home[locale].start.content %}
+    <div data-h2-flex-grid="b(top, expanded, flush, m)">
+      <div
+        data-h2-display="b(none) m(block)" 
+        data-h2-flex-item="b(1of12)"></div>
+      <div data-h2-flex-item="b(1of1) m(7of12)">
+        <p 
+          data-h2-margin="b(all, none)"
+          data-h2-font-color="b([light]black) b:dark(white)"
+          data-h2-width="m(85)">{{ item.content }}</p>
+      </div>
+      <div data-h2-flex-item="b(1of1) m(4of12)"{% if item.code == null %}data-h2-display="b(none) m(block)"{% endif %}>
+        {% if item.code.length == 2 %}
+          <div data-h2-flex-grid="b(top, expanded, flush, s)">
+            {% for item in item.code %}
+              <div data-h2-flex-item="b(1of2)">
+                <pre
+                  data-h2-bg-color="b([light]black)"
+                  data-h2-padding="b(all, s)"
+                  data-h2-radius="b(rounded)"
+                  data-h2-overflow="b(x, auto)"
+                  data-h2-margin="b(top, none) b(bottom, s) m(all, none)"
+                  data-h2-font-color="b(white)"><code>{{ item }}</code></pre>
+              </div>
+            {% endfor %}
+          </div>
+        {% elseif item.code == null %}
+          {# Do nothing #}
+        {% else %}
+          <pre
+            data-h2-bg-color="b([light]black)"
+            data-h2-padding="b(all, s)"
+            data-h2-radius="b(rounded)"
+            data-h2-overflow="b(x, auto)"
+            data-h2-margin="b(top, none) b(bottom, s) m(all, none)"
+            data-h2-font-color="b(white)"><code>{{ item.code }}</code></pre>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+  <hr
+    data-h2-margin="b(top-bottom, xxl)">
+</div>
