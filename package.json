@@ -4,25 +4,25 @@
   "description": "",
   "main": ".eleventy.js",
   "dependencies": {
-    "autoprefixer": "^10.1.0",
-    "postcss": "^8.2.1"
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "@hydrogen-design-system/hydrogen.css": "^1.1.16",
-    "alpinejs": "^3.2.4",
-    "browser-sync": "^2.26.14",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
+    "@hydrogen-design-system/hydrogen.css": "^2.0.0-beta.1",
+    "alpinejs": "^3.10.2",
+    "browser-sync": "^2.27.10",
     "cross-env": "^7.0.2",
     "html-minifier": "^4.0.0",
     "js-yaml": "^3.14.0",
     "luxon": "^1.25.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^8.3.1",
-    "prismjs": "^1.21.0"
+    "prismjs": "^1.28.0"
   },
   "scripts": {
-    "start": "npm-run-all --parallel hydrogen eleventy browsersync",
+    "start": "npm-run-all --parallel hydrogen eleventy",
     "eleventy": "eleventy --serve --quiet",
     "hydrogen": "npx h2-watch",
     "debug": "set DEBUG=* & eleventy",

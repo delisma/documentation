@@ -1,22 +1,22 @@
 <div
     data-h2-container="b(center, l)"
-    data-h2-margin="b(top, xxl)"
-    data-h2-padding="b(right-left, l) m(right-left, xxl) b(bottom, xl)">
+    data-h2-margin="b(x5, auto, 0, auto)"
+    data-h2-padding="b(0, x3, x2, x3) m(0, x5, x2, x5)">
   <div
     data-h2-text-align="b(center) m(left)" 
-    data-h2-flex-grid="b(middle, expanded, flush, m)">
+    data-h2-flex-grid="b(center, 0, x2)">
     <div data-h2-flex-item="b(1of1) m(1of12)">
       <img 
         src="/static/img/icon-compass.svg" 
         alt="{{ home[locale].properties.iconAlt }}" 
-        data-h2-width="b(25) s(15) m(90)"
+        data-h2-width="b(25%) s(15%) m(90%)"
         data-h2-display="b(inline-block)"
         class="section-icon">
     </div>
     <div data-h2-flex-item="b(1of1) m(auto)">
       <h2
-        data-h2-margin="b(all, none)"
-        data-h2-font-color="b([light]black) b:dark(white)"
+        data-h2-font-color="b([dark]font) b:dark(white)"
+        data-h2-font-size="b(h3)"
         data-h2-font-weight="b(800)">{{ home[locale].properties.title }}</h2>
     </div>
     <div data-h2-flex-item="b(1of1) m(content)">
@@ -24,24 +24,24 @@
         href="{{ home[locale].properties.titleLink.url }}"
         title="{{ home[locale].properties.titleLink.title }}"
         data-h2-font-weight="b(300)"
-        data-h2-font-color="b([light]black) b:dark(white) b:h(primary)"
-        data-h2-font-size="b(h5)">{{ home[locale].properties.titleLink.label }}</a>
+        data-h2-font-color="b([dark]font) b:dark(white) b:hover(primary)"
+        data-h2-font-size="b(h6)">{{ home[locale].properties.titleLink.label }}</a>
     </div>  
   </div>
 </div>
 <div
   data-h2-bg-color="b(black)" 
-  data-h2-margin="b(top, xxl)"
+  data-h2-margin="b(x4, 0, 0, 0)"
   data-h2-layer="b(1, relative)">
   <div 
       data-h2-bg-color="b(divider)"
-      data-h2-height="b(xxs)"></div>
+      data-h2-height="b(x.25)"></div>
   <div
     data-h2-position="b(absolute)"
-    data-h2-location="b(top, none) b(left, none)"
-    data-h2-overflow="b(all, hidden)"
+    data-h2-offset="b(0, auto, auto, 0)"
+    data-h2-overflow="b(hidden)"
     data-h2-height="b(100)"
-    data-h2-width="b(100)">
+    data-h2-width="b(100%)">
     <div
       class="accent-radial"
       data-h2-bg-color="b(accentRadial)"></div>
@@ -50,32 +50,32 @@
       data-h2-bg-color="b(primaryRadial)"></div>
   </div>
   <div
-    data-h2-padding="b(right-left, l) m(right-left, xxl)" 
+    data-h2-padding="b(0, x3) m(0, x5)" 
     data-h2-container="b(center, l)"
     data-h2-layer="b(1, relative)">
     <div
       data-h2-bg-color="b(white) b:dark([light]black)"
       data-h2-radius="b(rounded)"
-      data-h2-margin="b(top, -xxl)"
+      data-h2-margin="b(-x4, 0, 0, 0)"
       data-h2-shadow="b(m)"
-      data-h2-padding="b(all, l) m(all, xl)">
-      <div data-h2-flex-grid="b(top, expanded, flush, m)">
+      data-h2-padding="b(x2) m(x3)">
+      <div data-h2-flex-grid="b(flex-start, 0, x2)">
         {% for group in groups[locale] %}
           <div data-h2-flex-item="b(1of1) s(1of3) m(1of5)">
             <p
               data-h2-font-weight="b(800)"
-              data-h2-margin="b(top, none) b(bottom, m)"
+              data-h2-margin="b(0, 0, x1, 0)"
               data-h2-font-color="b([dark]primary) b:dark([light]primary)">{{ group.title }}</p>
-            <ul>
+            <ul data-h2-padding="b(0, 0, 0, x1)">
               {% set propertyCollection = collections["properties_" + locale] %}
               {% for prop in propertyCollection %}
                 {% for item in properties[locale] %}
                   {% if prop.data.key == item.key %}
                     {% if item.group == group.key %}
-                      <li data-h2-font-color="b([light]black) b:dark(white)">
+                      <li data-h2-font-color="b([dark]font) b:dark(white)">
                         <a
                           href="{{ prop.url | url }}"
-                          data-h2-font-color="b([light]black) b:h(primary) b:dark(white)"
+                          data-h2-font-color="b([dark]font) b:hover(primary) b:dark(white)"
                           title="{{ item.linkTitle }}">{{ item.title | lower }}</a>
                       </li>
                     {% endif %}
