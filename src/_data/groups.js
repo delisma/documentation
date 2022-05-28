@@ -2,23 +2,23 @@ module.exports = {
   en: [
     {
       key: "basic",
-      title: "Basic properties"
+      title: "Basic attributes"
     },
     {
       key: "font",
-      title: "Font properties"
+      title: "Font attributes"
     },
     {
       key: "space",
-      title: "Space properties"
+      title: "Space attributes"
     },
     {
       key: "grid",
-      title: "Grid properties"
+      title: "Grid attributes"
     },
     {
       key: "flexbox",
-      title: "Flexbox properties"
+      title: "Flexbox attributes"
     }
   ],
   fr: [

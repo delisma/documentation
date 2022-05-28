@@ -1,0 +1,3 @@
+{
+  "permalink": "/{{ locale }}/{{ site[locale].postNames.attributes }}/{{ page.fileSlug }}/"
+}

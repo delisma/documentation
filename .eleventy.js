@@ -62,24 +62,24 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("./src/fr/configuration/**/*.md");
   });
 
-  eleventyConfig.addCollection("properties_en", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("./src/en/properties/**/*.md");
+  eleventyConfig.addCollection("attributes_en", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/en/attributes/**/*.md");
   });
   
-  eleventyConfig.addCollection("properties_fr", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("./src/fr/properties/**/*.md");
+  eleventyConfig.addCollection("attributes_fr", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/fr/attributes/**/*.md");
   });
 
-  eleventyConfig.addCollection("properties_en_asc", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("./src/en/properties/**/*.md").sort(function(a, b) {
+  eleventyConfig.addCollection("attributes_en_asc", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/en/attributes/**/*.md").sort(function(a, b) {
       if (a.data.key > b.data.key) return 1;
       else if (a.data.key < b.data.key) return -1;
       else return 0;
     });
   });
 
-  eleventyConfig.addCollection("properties_fr_asc", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("./src/fr/properties/**/*.md").sort(function(a, b) {
+  eleventyConfig.addCollection("attributes_fr_asc", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/fr/attributes/**/*.md").sort(function(a, b) {
       if (a.data.key > b.data.key) return 1;
       else if (a.data.key < b.data.key) return -1;
       else return 0;

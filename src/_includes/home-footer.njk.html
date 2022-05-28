@@ -8,7 +8,7 @@
     <div data-h2-flex-item="b(1of1) m(1of11)">
       <img 
         src="/static/img/icon-compass.svg" 
-        alt="{{ home[locale].properties.iconAlt }}" 
+        alt="{{ home[locale].attributes.iconAlt }}" 
         data-h2-width="b(25%) s(15%) m(100%)"
         data-h2-margin="b(5px, 0, 0, 0)"
         data-h2-display="b(inline-block)"
@@ -17,15 +17,15 @@
     <div data-h2-flex-item="b(1of1) m(auto)">
       <h2
         data-h2-font-size="b(h3)"
-        data-h2-font-weight="b(800)">{{ home[locale].properties.title }}</h2>
+        data-h2-font-weight="b(800)">{{ home[locale].attributes.title }}</h2>
     </div>
     <div data-h2-flex-item="b(1of1) m(content)">
       <a 
-        href="{{ home[locale].properties.titleLink.url }}"
-        title="{{ home[locale].properties.titleLink.title }}"
+        href="{{ home[locale].attributes.titleLink.url }}"
+        title="{{ home[locale].attributes.titleLink.title }}"
         data-h2-font-weight="b(300)"
         data-h2-font-color="b:hover(primary) b:dark:hover([lighter]primary)"
-        data-h2-font-size="b(h6)">{{ home[locale].properties.titleLink.label }}</a>
+        data-h2-font-size="b(h6)">{{ home[locale].attributes.titleLink.label }}</a>
     </div>  
   </div>
 </div>
@@ -67,9 +67,9 @@
               data-h2-margin="b(0, 0, x1, 0)"
               data-h2-font-color="b([dark]primary) b:dark([lighter]primary)">{{ group.title }}</p>
             <ul data-h2-padding="b(0, 0, 0, x1)">
-              {% set propertyCollection = collections["properties_" + locale + "_asc"] %}
+              {% set propertyCollection = collections["attributes_" + locale + "_asc"] %}
               {% for prop in propertyCollection %}
-                {% for item in properties[locale] %}
+                {% for item in attributes[locale] %}
                   {% if prop.data.key == item.key %}
                     {% if item.group == group.key %}
                       <li data-h2-margin="b(0, 0, x.5, 0)" >
