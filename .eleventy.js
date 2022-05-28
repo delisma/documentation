@@ -43,6 +43,7 @@ module.exports = function (eleventyConfig) {
     "./src/static/css/hydrogen.css": "./static/css/hydrogen.css",
     "./src/static/css/hydrogen.vars.css": "./static/css/hydrogen.vars.css",
     "./src/static/scripts/app.js": "./static/js/app.js",
+    "./src/static/_redirects": "./_redirects",
   });
 
   eleventyConfig.addCollection("overview_en", function (collectionApi) {
