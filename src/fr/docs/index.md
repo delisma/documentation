@@ -1,5 +1,5 @@
 ---
 layout: docs.njk
-title: Hydrogen documentation
+title: Documentation de Hydrogen
 translationKey: "docs"
 ---

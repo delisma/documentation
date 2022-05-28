@@ -33,12 +33,16 @@ module.exports = function (eleventyConfig) {
     return moment(date).format(format);
   });
 
+  eleventyConfig.setWatchThrottleWaitTime(1000); // in milliseconds
+
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/cdn.min.js": "./static/js/alpine.js",
     "./node_modules/prismjs/themes/prism-tomorrow.css": "./static/css/prism-tomorrow.css",
     "./src/static/css/app.css": "./static/css/app.css",
     "./src/static/css/hydrogen.css": "./static/css/hydrogen.css",
+    "./src/static/css/hydrogen.vars.css": "./static/css/hydrogen.vars.css",
+    "./src/static/scripts/app.js": "./static/js/app.js",
   });
 
   eleventyConfig.addCollection("overview_en", function (collectionApi) {
@@ -65,6 +69,22 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("./src/fr/properties/**/*.md");
   });
 
+  eleventyConfig.addCollection("properties_en_asc", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/en/properties/**/*.md").sort(function(a, b) {
+      if (a.data.key > b.data.key) return 1;
+      else if (a.data.key < b.data.key) return -1;
+      else return 0;
+    });
+  });
+
+  eleventyConfig.addCollection("properties_fr_asc", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/fr/properties/**/*.md").sort(function(a, b) {
+      if (a.data.key > b.data.key) return 1;
+      else if (a.data.key < b.data.key) return -1;
+      else return 0;
+    });
+  });
+
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
@@ -74,14 +94,14 @@ module.exports = function (eleventyConfig) {
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if (outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
+    // if (outputPath.endsWith(".html")) {
+    //   let minified = htmlmin.minify(content, {
+    //     useShortDoctype: true,
+    //     removeComments: true,
+    //     collapseWhitespace: true
+    //   });
+    //   return minified;
+    // }
 
     return content;
   });

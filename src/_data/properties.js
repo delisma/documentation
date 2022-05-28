@@ -43,6 +43,12 @@ module.exports = {
       linkTitle: ""
     },
     {
+      key: "flex-basis",
+      title: "Flex basis",
+      group: "flexbox",
+      linkTitle: ""
+    },
+    {
       key: "flex-direction",
       title: "Flex direction",
       group: "flexbox",
@@ -97,6 +103,24 @@ module.exports = {
       linkTitle: ""
     },
     {
+      key: "gap",
+      title: "Gap",
+      group: "grid",
+      linkTitle: ""
+    },
+    {
+      key: "grid-template-columns",
+      title: "Grid template columns",
+      group: "grid",
+      linkTitle: ""
+    },
+    {
+      key: "grid-template-rows",
+      title: "Grid template rows",
+      group: "grid",
+      linkTitle: ""
+    },
+    {
       key: "height",
       title: "Height",
       group: "space",
@@ -117,6 +141,18 @@ module.exports = {
     {
       key: "margin",
       title: "Margin",
+      group: "space",
+      linkTitle: ""
+    },
+    {
+      key: "max-height",
+      title: "Max height",
+      group: "space",
+      linkTitle: ""
+    },
+    {
+      key: "max-width",
+      title: "Max width",
       group: "space",
       linkTitle: ""
     },
@@ -175,9 +211,21 @@ module.exports = {
       linkTitle: ""
     },
     {
+      key: "text-decoration",
+      title: "Text decoration",
+      group: "font",
+      linkTitle: ""
+    },
+    {
       key: "text-transform",
       title: "Text transform",
       group: "font",
+      linkTitle: ""
+    },
+    {
+      key: "transition",
+      title: "Transition",
+      group: "basic",
       linkTitle: ""
     },
     {

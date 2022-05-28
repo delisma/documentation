@@ -10,7 +10,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
-    "@hydrogen-design-system/hydrogen.css": "^2.0.0-beta.1",
+    "@hydrogen-design-system/hydrogen.css": "^2.0.0-beta.4",
     "alpinejs": "^3.10.2",
     "browser-sync": "^2.27.10",
     "cross-env": "^7.0.2",

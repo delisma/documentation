@@ -1,5 +1,5 @@
 ---
 layout: home.njk
 title: Hydrogen
+translationKey: "home"
 ---
-French home

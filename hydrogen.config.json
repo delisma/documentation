@@ -4,7 +4,7 @@
   ],
   "output": "src/static/css",
   "variables": {
-    "css": false,
+    "css": true,
     "sass": false
   },
   "colors": [
@@ -195,5 +195,25 @@
       "key": "xl",
       "shadow": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2)"
     }
-  ]
+  ],
+  "transitions": {
+    "durations": [
+      {
+        "key": "default",
+        "duration": ".2s"
+      }
+    ],
+    "functions": [
+      {
+        "key": "ease",
+        "function": "ease"
+      }
+    ],
+    "delays": [
+      {
+        "key": "none",
+        "delay": "0s"
+      }
+    ]
+  }
 }

@@ -1,69 +1,66 @@
 <div
     data-h2-container="b(center, l)"
-    data-h2-padding="b(0, x3) m(0, x5)"
+    data-h2-padding="b(0, x1) m(0, x5)"
     data-h2-margin="b(x5, auto, 0, auto)">
   <div
     data-h2-text-align="b(center) m(left)" 
-    data-h2-flex-grid="m(center, 0, x2)">
-    <div data-h2-flex-item="b(1of1) m(1of12)">
+    data-h2-flex-grid="b(center, 0, x2)">
+    <div data-h2-flex-item="b(1of1) m(1of11)">
       <img 
         src="/static/img/icon-robot.svg" 
         alt="{{ home[locale].otherFeatures.iconAlt }}" 
-        data-h2-width="b(25%) s(15%) m(90%)"
+        data-h2-width="b(25%) s(15%) m(100%)"
         data-h2-display="b(inline-block)"
-        data-h2-margin="b(0, 0, x3, 0) m(0)"
+        data-h2-margin="b(5px, 0, 0, 0)"
         class="section-icon">
     </div> 
-    <div data-h2-flex-item="b(1of1) m(11of12)">
+    <div data-h2-flex-item="b(1of1) m(10of11)">
       <h2
-        data-h2-font-color="b([light]black) b:dark(white)"
         data-h2-margin="b(0)"
         data-h2-font-size="b(h3)"
-        data-h2-font-weight="b(800)">
+        data-h2-font-weight="b(700)">
           {{ home[locale].otherFeatures.title }}
         </h2>
     </div>
   </div>
   {% for item in home[locale].otherFeatures.features %}
-    <div data-h2-margin="b(x4, 0, 0, 0)">
-      <div data-h2-flex-grid="b(flex-start, 0, x2)">
+    <div data-h2-margin="b(x2, 0, 0, 0)">
+      <div data-h2-flex-grid="b(flex-start, 0, 0, x1) m(flex-start, 0, x2, x.5)">
         <div 
-          data-h2-flex-item="b(1of1) m(1of12)"
+          data-h2-flex-item="b(1of1) m(1of11)"
           data-h2-align-self="b(center)">
             <div
-              data-h2-width="b(25%) m(85%)"
+              data-h2-width="b(25%) m(100%)"
               data-h2-height="b(x.25)"
               data-h2-bg-color="b(primary) b:dark(accent)"
               data-h2-radius="b(pill)"></div>
           </div>
-        <div data-h2-flex-item="b(1of1) m(11of12)">
+        <div data-h2-flex-item="b(1of1) m(10of11)">
           <p 
-            data-h2-font-color="b([light]black) b:dark(white)"
             data-h2-margin="b(0)"
-            data-h2-font-weight="b(800)"
+            data-h2-font-weight="b(700)"
             data-h2-font-size="b(h6)">{{ item.title }}</p>
         </div>
-        <div data-h2-flex-item="b(1of12)" data-h2-display="b(none) m(block)"></div>
-        <div data-h2-flex-item="b(1of1) m(7of12)">
+        <div data-h2-flex-item="b(1of11)" data-h2-display="b(none) m(block)"></div>
+        <div data-h2-flex-item="b(1of1) m(6of11)">
           {% for item in item.content %}
             <p 
-              data-h2-font-color="b([light]black) b:dark(white)"
               data-h2-margin="b(0)"
               data-h2-width="m(85%)">{{ item }}</p>
           {% endfor %}
         </div>
         <div 
-          data-h2-flex-item="b(1of1) m(4of12)"
+          data-h2-flex-item="b(1of1) m(4of11)"
           data-h2-text-align="b(center)">
           <a
             href="{{ item.link.url }}"
             title="{{ item.link.title }}"
             data-h2-display="b(block)"
-            data-h2-bg-color="b(white) b:dark([light]black)"
+            data-h2-bg-color="b(white) b:dark([dark]font)"
             data-h2-radius="b(rounded)"
             data-h2-shadow="b(s) b:hover(xl)"
             data-h2-padding="b(x1, x2)"
-            data-h2-font-color="b([darker]primary) b:hover(primary) b:dark(white)"
+            data-h2-font-color="b([darker]primary) b:hover(primary) b:dark(white) b:dark:hover([lighter]primary)"
             data-h2-font-weight="b(800)"
             >{{ item.link.label }}</a>
         </div>

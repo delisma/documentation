@@ -2,6 +2,16 @@ module.exports = {
   buildTime: new Date(),
   baseUrl: "https://hydrogen.design",
   name: "Hydrogen",
+  languages: [
+    {
+      label: "EN",
+      code: "en",
+    },
+    {
+      label: "FR",
+      code: "fr",
+    },
+  ],
   en: {
     metaTitle: "Title in english",
     metaDescription: "Description in english",
