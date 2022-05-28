@@ -22,11 +22,13 @@
     "prismjs": "^1.28.0"
   },
   "scripts": {
-    "start": "npm-run-all --parallel hydrogen eleventy",
-    "eleventy": "eleventy --serve --quiet",
-    "hydrogen": "npx h2-watch",
+    "start": "npm-run-all --parallel hydrogenWatch eleventyServe",
+    "eleventyServe": "eleventy --serve --quiet",
+    "eleventyBuild": "eleventy",
+    "hydrogenWatch": "npx h2-watch",
+    "hydrogenBuild": "npx h2-build",
     "debug": "set DEBUG=* & eleventy",
-    "build": "cross-env NODE_ENV=production eleventy",
+    "build": "npm-run-all --sequential hydrogenBuild eleventyBuild",
     "browsersync": "browser-sync start --server '_site' --startPath 'en/index.html' --files '_site' --port 8080 --no-notify --no-open"
   },
   "repository": {
