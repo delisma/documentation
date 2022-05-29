@@ -1,79 +1,115 @@
 module.exports = {
   en: {
     slogan: "An experimental, open-source CSS utility framework powered by data attributes.",
-    features: [
+    intro: [
       {
-        title: "A custom attribute syntax",
+        title: "What is Hydrogen?",
         content: [
-          "Hydrogen uses custom data attributes as selectors. This enables complex and flexible customization while providing a legible, easy to learn syntax.",
-          "The resulting CSS is namespaced to the library, preventing it from interfering with existing code."
+          "Hydrogen is a utility-type CSS framework that allows you to style websites right in your markup. Design settings meet the flexibility of data-attributes to help you create consistent, beautiful experiences."
         ]
       },
       {
-        title: "Filtered and production ready",
+        title: "How does it work?",
         content: [
-          "CSS libraries are huge, and that’s why Hydrogen is built with filtering at its core.",
-          "Hydrogen scans your code while you work to produce a CSS file on the fly that contains only what you’ve used on your project, nothing more."
+          "Hydrogen watches your markup for any instance of a data-h2 attribute and builds CSS based on its value. It produces a tiny, production-ready file that only contains exactly what you've asked for."
         ]
       },
       {
-        title: "Configurable to your brand",
+        title: "Why should I use it?",
         content: [
-          "Hydrogen offers a suite of options that not only allow you to modify core theme settings, but extend them to ensure the system scales to your brand.",
-          "It thoughtfully applies constraints to the options you provide to ensure consistency and reuse."
+          "Hydrogen's syntax is clear, legible, and aligns with the CSS you already know - no more naming classes. It works as fast as you do, can be customized to your needs, and best of all, it's open-source!"
         ]
       }
     ],
-    otherFeatures: {
-      title: "Other features",
+    features: {
+      title: "Feature overview",
       iconAlt: "A sticker icon of one of Hydrogen's adorable little mascots, Beep. Beep is a robot.",
       features: [
         {
-          title: "We're proudly open-source",
+          title: "An easy-to-learn, namespaced syntax",
           content: [
-            "Hydrogen is primarily an experimental passion project, and it has only ever made sense to open-source the work for others to build upon and improve. Hydrogen is provided under an MIT license. If you’re curious about what’s under the hood, check out Hydrogen on Github."
+            "Hydrogen's syntax is deliberately verbose to make understanding your markup as easy as possible. It pulls from existing CSS best practices where possible so that you're not relearning a whole new language, and it won't interfere with your existing CSS thanks to its custom attributes."
           ],
-          link: {
-            label: "Visit Hydrogen on Github",
-            title: "This link will take you to Hydrogen's Github page, where you can view the code, fork the code, and submit issues.",
-            url: ""
-          }
+          code: [
+            "<p data-h2-color=\"b(primary) b:hover(accent)\">",
+            "  Welcome to Hydrogen!",
+            "</p>"
+          ]
         },
         {
-          title: "Make it perfect with custom CSS",
+          title: "Watch it build as you work, in an instant",
           content: [
-            "Sometimes you need to break out of design constraints and tweak something so it's just perfect. Many of Hydrogen's attributes allow you to enter custom CSS values in place of keys so that you can achieve that pixel perfect placement or color."
+            "By avoiding unnecessary compiling, Hydrogen works incredibly fast to scan your code and build a CSS file. This means you can have it running in the background as you develop and it will provide an up-to-date CSS file for you on the fly."
           ],
-          link: {
-            label: "Learn more about using CSS",
-            title: "",
-            url: ""
-          }
+          code: [
+            "⌚ [Hydrogen] Total Hydrogen build time: 38.123ms",
+            "✅ [Hydrogen] A CSS file was successfully built in ./src/static/css/",
+            "👀 [Hydrogen] Watching for changes to your code..."
+          ]
         },
         {
-          title: "Have fun with states",
+          title: "Your brand, your way, in every line",
           content: [
-            "Along with custom media queries, Hydrogen offers granular control over an element’s state through mutator values. Control things like color, space, and shadow by appending states to your media queries."
+            "Embracing a design token style approach, Hydrogen encourages you to define decisions like color and typography in its configuration file. Use these definitions in your attributes, and update them product-wide in a matter of seconds."
           ],
-          link: {
-            label: "Learn more about states",
-            title: "",
-            url: ""
-          }
-        },
-        {
-          title: "The comfort of dark mode",
-          content: [
-            "A new addition to Hydrogen, you can now use a :dark mutator on your media queries to specify styles that should only apply to a dark theme for your project. Dark mode supports both user preference and a class-based toggle."
-          ],
-          link: {
-            label: "Learn more about dark mode",
-            title: "",
-            url: ""
-          }
+          code: [
+            "\"colors\": [ ",
+            "  { \"key\": \"primary\", \"color\": #9D5CFF, \"scale\": {} }",
+            "]"
+          ]
         }
       ]
     },
+    otherFeatures: [
+      {
+        title: "Inline media queries",
+        content: [
+          "Define as many media queries as you need in your settings and then use them right in your markup."
+        ]
+      },
+      {
+        title: "State management",
+        content: [
+          "Style and manage HTML interaction states like hover and focus right in your attributes."
+        ]
+      },
+      {
+        title: "Dark mode",
+        content: [
+          "Pair queries with dark mode counterparts and toggle them through a class or browser setting."
+        ]
+      },
+      {
+        title: "CSS values",
+        content: [
+          "Need to tweak it to perfection? Use raw CSS values in many attributes to get it pixel perfect."
+        ]
+      },
+      {
+        title: "Variable exports",
+        content: [
+          "Export your settings to Sass or CSS variables and use them in your app's CSS file to keep everything consistent."
+        ]
+      },
+      {
+        title: "Color ranges",
+        content: [
+          "Generate automatic tints and shades for your brand colors, or override them if you want them to be exact."
+        ]
+      },
+      {
+        title: "Convenience attributes",
+        content: [
+          "Hydrogen isn't limited to just CSS properties - attributes like overlay and visibility make tedious tasks easy."
+        ]
+      },
+      {
+        title: "Open-source",
+        content: [
+          "The whole framework is provided on Github under an MIT license. Dig into the code and discover the possibilities."
+        ]
+      },
+    ],
     start: {
       title: "Quick start",
       iconAlt: "",
@@ -94,7 +130,7 @@ module.exports = {
         },
         {
           content: "After successfully creating your configuration file, you can either start customizing, or begin using Hydrogen attributes in your code.",
-          code: "<p data-h2-bg-color=”b(primary)”>\n  Hello!\n</p>"
+          code: "<p data-h2-color=”b(primary)”>\n  Hello!\n</p>"
         },
         {
           content: "When you’re ready to view your work, you can choose to build Hydrogen once, or use the watch command to continuously watch for changes and automatically prepare your CSS file.",

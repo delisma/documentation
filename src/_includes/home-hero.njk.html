@@ -1,6 +1,6 @@
 <div 
   data-h2-bg-color="b(black)"
-  data-h2-padding="b(x4, 0) m(x4, 0, x3, 0)"
+  data-h2-padding="b(x2, 0) m(x4, 0, x3, 0)"
   data-h2-layer="b(1, relative)"
   data-h2-overflow="b(hidden)">
   <div
@@ -16,7 +16,8 @@
     data-h2-position="b(relative)">
     <div
       data-h2-display="b(inline-block)"
-      data-h2-width="b(70%) m(50%)">
+      data-h2-text-align="b(center) m(right)"
+      data-h2-width="m(50%)">
       <div
         data-h2-height="b(x.25)"
         data-h2-bg-color="b(accent)"
@@ -26,7 +27,7 @@
         data-h2-font-color="b(white)"
         data-h2-margin="b(x1, 0, 0, 0)"
         data-h2-font-weight="b(200)"
-        data-h2-width="b(75%)"
+        data-h2-width="b(90%) m(75%)"
         data-h2-font-size="b(h6, 1.3)">{{ home[locale].slogan }}</span>
     </div>
     <h1
@@ -46,7 +47,7 @@
   data-h2-margin="b(-x3, auto, 0, auto)"
   data-h2-layer="b(2, relative)">
   <div data-h2-flex-grid="b(flex-start, 0, x2, x1) m(stretch, 0, x2)">
-    {% for item in home[locale].features %}
+    {% for item in home[locale].intro %}
       <div data-h2-flex-item="m(1of3)">
         <div
           data-h2-bg-color="b(white) b:dark([dark]font)"

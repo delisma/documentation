@@ -60,10 +60,10 @@
       "key": "font",
       "color": "#53FFE0",
       "scale": {
-        "light": "#FFFFFF",
+        "light": "#ccccdb",
         "lighter": "auto",
         "lightest": "auto",
-        "dark": "#282A3A",
+        "dark": "#2a2b38",
         "darker": "auto",
         "darkest": "auto"
       }

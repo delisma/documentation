@@ -29,10 +29,10 @@
 --h2-color-darker-accent: rgb(49, 191, 176);
 --h2-color-darkest-accent: rgb(49, 191, 176);
 --h2-color-font: #53FFE0;
---h2-color-light-font: #FFFFFF;
+--h2-color-light-font: #ccccdb;
 --h2-color-lighter-font: rgb(169, 255, 240);
 --h2-color-lightest-font: rgb(212, 255, 247);
---h2-color-dark-font: #282A3A;
+--h2-color-dark-font: #2a2b38;
 --h2-color-darker-font: rgb(49, 191, 176);
 --h2-color-darkest-font: rgb(49, 191, 176);
 /* Gradients */
