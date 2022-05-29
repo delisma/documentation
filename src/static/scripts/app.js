@@ -13,8 +13,18 @@ function toggleMode(element) {
 }
 
 window.onload = function() {
-  if (localStorage.getItem('color-mode') === 'dark' || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('color-mode'))) {
+  console.log('color-mode is:', localStorage.getItem('color-mode'));
+  if (localStorage.getItem('color-mode') === 'dark') {
     document.querySelector('.mode-toggle').classList.add('active');
     document.querySelector('body').classList.add('h2-dark');
+    document.querySelector('body').classList.remove('h2-light');
+  } else if (localStorage.getItem('color-mode') === 'light') {
+    document.querySelector('.mode-toggle').classList.remove('active');
+    document.querySelector('body').classList.remove('h2-dark');
+    document.querySelector('body').classList.add('h2-light');
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && localStorage.getItem('color-mode') === null) {
+    document.querySelector('.mode-toggle').classList.add('active');
+    document.querySelector('body').classList.add('h2-dark');
+    document.querySelector('body').classList.remove('h2-light');
   }
 }

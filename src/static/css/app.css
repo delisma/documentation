@@ -57,8 +57,8 @@ pre code {
 }
 
 @keyframes sunRotate {
-  from { transform: translate(-50%, -52%) rotate(0deg) }
-  to { transform: translate(-50%, -52%) rotate(359deg) }
+  from { transform: translate(-50%, -51%) rotate(0deg) }
+  to { transform: translate(-50%, -51%) rotate(359deg) }
 }
 
 .mode-toggle>div .sun {
