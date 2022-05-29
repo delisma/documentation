@@ -13,7 +13,6 @@ function toggleMode(element) {
 }
 
 window.onload = function() {
-  console.log('color-mode is:', localStorage.getItem('color-mode'));
   if (localStorage.getItem('color-mode') === 'dark') {
     document.querySelector('.mode-toggle').classList.add('active');
     document.querySelector('body').classList.add('h2-dark');

@@ -98,9 +98,9 @@ module.exports = {
         ]
       },
       {
-        title: "Convenience attributes",
+        title: "Vertical rhythm",
         content: [
-          "Hydrogen isn't limited to just CSS properties - attributes like overlay and visibility make tedious tasks easy."
+          "Hydrogen takes your base copy line height and produces a typography scale and flexible whitespace system."
         ]
       },
       {
