@@ -1,4 +1,4 @@
 node_modules
 README.md
-src/static/css/hydrogen
-static/css/hydrogen
+src/static/css/hydrogen.css
+src/static/css/hydrogen.vars.css
