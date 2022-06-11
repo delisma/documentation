@@ -6,27 +6,34 @@
       data-h2-padding="b(x1, x1) m(x.5, x5)">
       <div data-h2-flex-grid="b(center, 0, x1)">
         <div data-h2-flex-item="b(auto)">
+          {% set currentKey = eleventyNavigation.key %}
+          {% set navPages = collections.all | eleventyNavigationBreadcrumb(currentKey, { includeSelf: true }) %}
           <ul data-h2-padding="b(0)">
-            <li
-              data-h2-margin="b(0, x.5, 0, 0)" 
-              data-h2-display="b(inline-block)">
-              <a 
-                href="/{{ locale }}/"
-                title=""
-                data-h2-font-color="b:hover(primary) b:dark:hover(lighter.primary)">Home</a></li>
-            <li
-              data-h2-margin="b(0, x.5, 0, 0)" 
-              data-h2-display="b(inline-block)"><span>/</span></li>
-            <li
-              data-h2-margin="b(0, x.5, 0, 0)" 
-              data-h2-display="b(inline-block)">
-              <a 
-                href="/"
-                title=""
-                data-h2-font-weight="b(800)"
-                data-h2-text-decoration="b(none)"
-                data-h2-font-color="b(darker.primary) b:hover(primary) b:dark(lighter.primary) b:dark:hover(white)">Docs</a></li>
-          </ul>
+            {% for item in navPages %}
+              {% if loop.last == true %}
+                <li
+                data-h2-margin="b(0, x.5, 0, 0)" 
+                data-h2-display="b(inline-block)">
+                <a 
+                  href="{{ item.url }}"
+                  title=""
+                  data-h2-font-weight="b(800)"
+                  data-h2-text-decoration="b(none)"
+                  data-h2-font-color="b(darker.primary) b:hover(primary) b:dark(lighter.primary) b:dark:hover(white)">{{ item.key }}</a></li>
+              {% else %}
+              <li
+                data-h2-margin="b(0, x.5, 0, 0)" 
+                data-h2-display="b(inline-block)">
+                <a 
+                  href="{{ item.url }}"
+                  title=""
+                  data-h2-font-color="b:hover(primary) b:dark:hover(lighter.primary)">{{ item.key }}</a></li>
+              <li
+                data-h2-margin="b(0, x.5, 0, 0)" 
+                data-h2-display="b(inline-block)"><span>/</span></li>
+              {% endif %}
+            {% endfor %}
+          <ul>
         </div>
         <div
           data-h2-text-align="m(right)" 

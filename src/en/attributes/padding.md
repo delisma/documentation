@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: padding
+eleventyNavigation:
+  key: Padding
+  parent: Attributes
 ---

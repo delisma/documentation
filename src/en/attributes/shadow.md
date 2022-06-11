@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: shadow
+eleventyNavigation:
+  key: Shadows
+  parent: Attributes
 ---

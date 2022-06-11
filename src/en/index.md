@@ -1,5 +1,7 @@
 ---
 layout: home.njk
+eleventyNavigation:
+  key: Home
 title: Hydrogen
-translationKey: "home"
+key: home
 ---

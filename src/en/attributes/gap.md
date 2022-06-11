@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: gap
+eleventyNavigation:
+  key: Gap
+  parent: Attributes
 ---

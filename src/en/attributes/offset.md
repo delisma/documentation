@@ -1,6 +1,6 @@
 ---
-key: font-weight
+key: offset
 eleventyNavigation:
-  key: Font weight
+  key: Offset
   parent: Attributes
 ---

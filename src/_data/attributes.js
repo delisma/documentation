@@ -157,6 +157,12 @@ module.exports = {
       linkTitle: ""
     },
     {
+      key: "offset",
+      title: "Offset",
+      group: "space",
+      linkTitle: ""
+    },
+    {
       key: "opacity",
       title: "Opacity",
       group: "basic",

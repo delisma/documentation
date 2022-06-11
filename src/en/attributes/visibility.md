@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: visibility
+eleventyNavigation:
+  key: Visibility
+  parent: Attributes
 ---

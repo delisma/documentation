@@ -1,5 +1,5 @@
 <div
-    data-h2-container="b(center, l)"
+    data-h2-container="b(center, large)"
     data-h2-margin="b(x3, auto, 0, auto) m(x5, auto, 0, auto)"
     data-h2-padding="b(0, x1) m(0, x5)">
   <div
@@ -18,7 +18,7 @@
       <h2
         data-h2-margin="b(0)"
         data-h2-font-weight="b(700)"
-        data-h2-font-color="b([dark]font) b:dark(white)"
+        data-h2-font-color="b(dark.font) b:dark(white)"
         data-h2-font-size="b(h4) m(h3)">{{ home[locale].start.title }}</h2>
     </div>
     <div data-h2-flex-item="b(1of1) m(content)">
@@ -26,7 +26,7 @@
         href="{{ home[locale].start.titleLink.url }}"
         title="{{ home[locale].start.titleLink.title }}"
         data-h2-font-weight="b(300)"
-        data-h2-font-color="b:hover(primary) b:dark:hover([lighter]primary)"
+        data-h2-font-color="b:hover(primary) b:dark:hover(lighter.primary)"
         data-h2-font-size="b(h6)">{{ home[locale].start.titleLink.label }}</a>
     </div>  
   </div>
@@ -60,7 +60,7 @@
               {% for item in item.code %}
                 <div data-h2-flex-item="b(1of2)">
                   <pre
-                    data-h2-bg-color="b([dark]font)"
+                    data-h2-bg-color="b(dark.font)"
                     data-h2-padding="b(x1)"
                     data-h2-radius="b(rounded)"
                     data-h2-overflow="b(auto, x)"
@@ -73,7 +73,7 @@
             {# Do nothing #}
           {% else %}
             <pre
-              data-h2-bg-color="b([dark]font)"
+              data-h2-bg-color="b(dark.font)"
               data-h2-padding="b(x1)"
               data-h2-radius="b(rounded)"
               data-h2-overflow="b(auto, x)"

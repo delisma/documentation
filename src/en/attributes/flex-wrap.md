@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: flex-wrap
+eleventyNavigation:
+  key: Flex wrap
+  parent: Attributes
 ---

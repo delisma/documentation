@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: radius
+eleventyNavigation:
+  key: Radius
+  parent: Attributes
 ---

@@ -18,7 +18,7 @@ module.exports = {
     postNames: {
       overview: "overview",
       configuration: "configuration",
-      properties: "properties"
+      attributes: "attributes"
     }
   },
   fr: {
@@ -27,7 +27,7 @@ module.exports = {
     postNames: {
       overview: "aperçu",
       configuration: "configuration",
-      properties: "propriétés"
+      attributes: "attributs"
     }
   },
 };

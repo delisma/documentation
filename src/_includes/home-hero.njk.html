@@ -11,7 +11,7 @@
     data-h2-bg-color="b(primaryRadial)"></div>
   <div
     data-h2-text-align="b(right)" 
-    data-h2-container="b(center, l)"
+    data-h2-container="b(center, large)"
     data-h2-padding="b(0, x1) m(0, x5)"
     data-h2-position="b(relative)">
     <div
@@ -42,7 +42,7 @@
   data-h2-bg-color="b(divider)"
   data-h2-height="b(x.25)"></div>
 <div 
-  data-h2-container="b(center, l)"
+  data-h2-container="b(center, large)"
   data-h2-padding="b(0, x1) m(0, x5)"
   data-h2-margin="b(-x3, auto, 0, auto)"
   data-h2-layer="b(2, relative)">
@@ -50,7 +50,7 @@
     {% for item in home[locale].intro %}
       <div data-h2-flex-item="m(1of3)">
         <div
-          data-h2-bg-color="b(white) b:dark([dark]font)"
+          data-h2-bg-color="b(white) b:dark(dark.font)"
           data-h2-padding="b(x2)"
           data-h2-radius="b(rounded)"
           data-h2-shadow="b(m)"
@@ -58,7 +58,7 @@
           <p
             data-h2-font-weight="b(800)"
             data-h2-font-size="b(copy)"
-            data-h2-font-color="b([darker]primary) b:dark([lighter]primary)">{{ item.title }}</p>
+            data-h2-font-color="b(darker.primary) b:dark(lighter.primary)">{{ item.title }}</p>
           {% for item in item.content %}
             <p data-h2-margin="b(x1, 0, 0, 0)">{{ item }}</p>
           {% endfor %}

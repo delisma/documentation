@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: transition
+eleventyNavigation:
+  key: Transition
+  parent: Attributes
 ---

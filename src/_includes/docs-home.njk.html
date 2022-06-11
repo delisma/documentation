@@ -5,7 +5,7 @@
     data-h2-position="b(absolute)"
     data-h2-offset="b(0, auto, auto, -x5)"
     data-h2-height="b(100%)"
-    data-h2-width="b(100vw)"
+    data-h2-width="b(var(--widthHack))"
     data-h2-bg-color="b(black)"
     data-h2-overflow="b(hidden)">
       <div
@@ -61,7 +61,26 @@
                 title=""
                 data-h2-font-size="b(h6)"
                 data-h2-font-weight="b(700)"
-                data-h2-font-color="b(white) b:hover([lighter]primary)">Installation</a>
+                data-h2-font-color="b(white) b:hover(lighter.primary)">Installation</a>
+            </div>
+          </div>
+        </div>
+        <div data-h2-flex-item="b(1of2)">
+          <div data-h2-flex-grid="b(center, 0, x2, 0)">
+            <div data-h2-flex-item="b(content)">
+              <div
+                data-h2-width="b(25%) m(x3)"
+                data-h2-height="b(x.25)"
+                data-h2-bg-color="b(accent)"
+                data-h2-radius="b(pill)"></div>
+            </div>
+            <div data-h2-flex-item="b(auto)">
+              <a
+                href="/{{ locale }}/docs/attributes"
+                title=""
+                data-h2-font-size="b(h6)"
+                data-h2-font-weight="b(700)"
+                data-h2-font-color="b(white) b:hover(lighter.primary)">Find an attribute</a>
             </div>
           </div>
         </div>
@@ -80,7 +99,7 @@
                 title=""
                 data-h2-font-size="b(h6)"
                 data-h2-font-weight="b(700)"
-                data-h2-font-color="b(white) b:hover([lighter]primary)">Find an attribute</a>
+                data-h2-font-color="b(white) b:hover(lighter.primary)">Basic usage</a>
             </div>
           </div>
         </div>
@@ -99,7 +118,7 @@
                 title=""
                 data-h2-font-size="b(h6)"
                 data-h2-font-weight="b(700)"
-                data-h2-font-color="b(white) b:hover([lighter]primary)">Basic usage</a>
+                data-h2-font-color="b(white) b:hover(lighter.primary)">Report an issue</a>
             </div>
           </div>
         </div>
@@ -118,7 +137,7 @@
                 title=""
                 data-h2-font-size="b(h6)"
                 data-h2-font-weight="b(700)"
-                data-h2-font-color="b(white) b:hover([lighter]primary)">Report an issue</a>
+                data-h2-font-color="b(white) b:hover(lighter.primary)">Configuration</a>
             </div>
           </div>
         </div>
@@ -137,26 +156,7 @@
                 title=""
                 data-h2-font-size="b(h6)"
                 data-h2-font-weight="b(700)"
-                data-h2-font-color="b(white) b:hover([lighter]primary)">Configuration</a>
-            </div>
-          </div>
-        </div>
-        <div data-h2-flex-item="b(1of2)">
-          <div data-h2-flex-grid="b(center, 0, x2, 0)">
-            <div data-h2-flex-item="b(content)">
-              <div
-                data-h2-width="b(25%) m(x3)"
-                data-h2-height="b(x.25)"
-                data-h2-bg-color="b(accent)"
-                data-h2-radius="b(pill)"></div>
-            </div>
-            <div data-h2-flex-item="b(auto)">
-              <a
-                href=""
-                title=""
-                data-h2-font-size="b(h6)"
-                data-h2-font-weight="b(700)"
-                data-h2-font-color="b(white) b:hover([lighter]primary)">Contribute</a>
+                data-h2-font-color="b(white) b:hover(lighter.primary)">Contribute</a>
             </div>
           </div>
         </div>
@@ -181,7 +181,7 @@
     </div>
     <div data-h2-flex-item="b(1of1) m(auto)">
       <h2
-        data-h2-font-color="b([dark]font) b:dark(white)"
+        data-h2-font-color="b(dark.font) b:dark(white)"
         data-h2-font-size="b(h4)"
         data-h2-font-weight="b(800)">What's new</h2>
     </div>
@@ -190,7 +190,7 @@
         href="{{ home[locale].properties.titleLink.url }}"
         title="{{ home[locale].properties.titleLink.title }}"
         data-h2-font-weight="b(300)"
-        data-h2-font-color="b:hover(primary) b:dark:hover([lighter]primary)"
+        data-h2-font-color="b:hover(primary) b:dark:hover(lighter.primary)"
         data-h2-font-size="b(h6)">See the full history</a>
     </div>  
   </div>
@@ -207,10 +207,10 @@
         </div>
       <div data-h2-flex-item="b(1of1) m(fill)">
         <p 
-          data-h2-font-color="b([dark]font) b:dark(white)"
+          data-h2-font-color="b(dark.font) b:dark(white)"
           data-h2-margin="b(0)"
           data-h2-font-weight="b(700)"
-          data-h2-font-size="b(h6)">Hydrogen's latest stable release is: <span data-h2-font-color="b([dark]primary) b:dark([lighter]primary)">2.0.0</span></p>
+          data-h2-font-size="b(h6)">Hydrogen's latest stable release is: <span data-h2-font-color="b(dark.primary) b:dark(lighter.primary)">2.0.0</span></p>
       </div>
       <div style="flex-basis: 100%; width: 0;"></div>
       <div 
@@ -220,7 +220,7 @@
         </div>
       <div data-h2-flex-item="b(1of1) m(fill)">
         <p
-          data-h2-font-color="b([dark]font) b:dark(white)"
+          data-h2-font-color="b(dark.font) b:dark(white)"
           data-h2-font-weight="b(700)">22 breaking changes</p>
         <ul data-h2-padding="b(x1, 0, 0, x1)">
           <li data-h2-margin="b(auto, auto, x.5, auto)">flex grid only takes 3 (4th optional) values now and has been reworked to avoid horizontal overflows</li>

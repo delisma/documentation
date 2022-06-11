@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: opacity
+eleventyNavigation:
+  key: Opacity
+  parent: Attributes
 ---

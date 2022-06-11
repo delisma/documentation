@@ -1,5 +1,5 @@
 <div
-    data-h2-container="b(center, l)"
+    data-h2-container="b(center, large)"
     data-h2-padding="b(0, x1) m(0, x5)"
     data-h2-margin="b(x3, auto, 0, auto) m(x5, auto, 0, auto)">
   <div
@@ -17,7 +17,7 @@
     <div data-h2-flex-item="b(1of1) m(10of11)">
       <h2
         data-h2-margin="b(0)"
-        data-h2-font-color="b([dark]font) b:dark(white)"
+        data-h2-font-color="b(dark.font) b:dark(white)"
         data-h2-font-size="b(h4) m(h3)"
         data-h2-font-weight="b(700)">
           {{ home[locale].features.title }}
@@ -53,7 +53,7 @@
         {% if item.code %}
           <div data-h2-flex-item="b(1of1) m(30of77)">
             <pre
-              data-h2-bg-color="b([dark]font)"
+              data-h2-bg-color="b(dark.font)"
               data-h2-padding="b(x1)"
               data-h2-radius="b(rounded)"
               data-h2-overflow="b(auto, x)"
@@ -68,11 +68,11 @@
               href="{{ item.link.url }}"
               title="{{ item.link.title }}"
               data-h2-display="b(block)"
-              data-h2-bg-color="b(white) b:dark([dark]font)"
+              data-h2-bg-color="b(white) b:dark(dark.font)"
               data-h2-radius="b(rounded)"
               data-h2-shadow="b(s) b:hover(xl)"
               data-h2-padding="b(x1, x2)"
-              data-h2-font-color="b([darker]primary) b:hover(primary) b:dark(white) b:dark:hover([lighter]primary)"
+              data-h2-font-color="b(darker.primary) b:hover(primary) b:dark(white) b:dark:hover(lighter.primary)"
               data-h2-font-weight="b(800)"
               data-h2-transition="b:hover(box-shadow, default, ease, none) b(box-shadow, default, ease, none)"
               >{{ item.link.label }}</a>

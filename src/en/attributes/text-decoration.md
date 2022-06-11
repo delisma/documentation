@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: text-decoration
+eleventyNavigation:
+  key: Text decoration
+  parent: Attributes
 ---

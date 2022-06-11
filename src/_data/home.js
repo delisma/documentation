@@ -157,28 +157,25 @@ module.exports = {
   },
   fr: {
     slogan: "Un cadre utilitaire CSS expérimental et open-source alimenté par des attributs de données.",
-    features: [
+    intro: [
       {
-        title: "Une syntaxe d'attribut personnalisée",
+        title: "Qu'est-ce que l'Hydrogen ?",
         content: [
-          "Hydrogen utilise des attributs de données personnalisés comme sélecteurs. Cela permet une personnalisation complexe et flexible tout en offrant une syntaxe lisible et facile à apprendre.",
-          "Le CSS qui en résulte est associé à la bibliothèque, ce qui l'empêche d'interférer avec le code existant."
+          "Hydrogen est un cadre CSS de type utilitaire qui vous permet de styliser les sites Web directement dans votre markup. Les paramètres de conception rencontrent la flexibilité des attributs de données pour vous aider à créer des expériences cohérentes et magnifiques."
         ]
       },
       {
-        title: "Filtré et prêt pour la production",
+        title: "Comment fonctionne-t-il ?",
         content: [
-          "Les cadres CSS sont énormes, et c'est pourquoi Hydrogen est construit avec le filtrage à son cœur.",
-          "Hydrogen analyse votre code pendant que vous travaillez pour produire à la volée un fichier CSS qui ne contient que ce que vous avez utilisé sur votre projet, rien de plus."
+          "Hydrogen recherche dans votre markup toute instance d'un attribut data-h2 et construit le CSS en fonction de sa valeur. Il produit un minuscule fichier prêt pour la production qui ne contient que ce que vous avez demandé."
         ]
       },
       {
-        title: "Configurable à votre marque",
+        title: "Pourquoi devrais-je l'utiliser ?",
         content: [
-          "Hydrogen propose une série d'options qui vous permettent non seulement de modifier les paramètres de base du thème, mais aussi de les étendre pour que le système s'adapte à votre marque.",
-          "Il applique de manière réfléchie des contraintes aux options que vous fournissez afin de garantir la cohérence et la réutilisation."
+          "La syntaxe d'Hydrogen est claire, lisible et s'aligne sur le CSS que vous connaissez déjà - plus besoin de nommer les classes. Il fonctionne aussi vite que vous, peut être adapté à vos besoins et, surtout, il est open-source !"
         ]
       }
-    ]
+    ],
   },
 };

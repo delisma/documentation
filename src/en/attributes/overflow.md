@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: overflow
+eleventyNavigation:
+  key: Overflow
+  parent: Attributes
 ---

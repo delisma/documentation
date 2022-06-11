@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: max-width
+eleventyNavigation:
+  key: Max width
+  parent: Attributes
 ---

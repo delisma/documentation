@@ -1,11 +1,11 @@
 <div 
-  data-h2-bg-color="b(white) b:dark([dark]font)" 
+  data-h2-bg-color="b(white) b:dark(dark.font)" 
   data-h2-position="m(sticky)" 
   data-h2-offset="b(0, auto, auto, auto)"
   data-h2-layer="b(5)"
   data-h2-shadow="b(xl)">
   <div
-      data-h2-container="b(center, l)"
+      data-h2-container="b(center, large)"
       data-h2-padding="b(x1, x1) m(x.5, x5)">
       <div data-h2-flex-grid="b(flex-start, 0, x1) m(center, 0, x1)">
         <div
@@ -20,14 +20,14 @@
                 title=""
                 data-h2-font-weight="b(800)"
                 data-h2-text-decoration="b(none)"
-                data-h2-font-color="b([darker]primary) b:hover(primary) b:dark([lighter]primary) b:dark:hover(white)">Home</a></li>
+                data-h2-font-color="b(darker.primary) b:hover(primary) b:dark(lighter.primary) b:dark:hover(white)">Home</a></li>
             <li
               data-h2-margin="b(0, x1, 0, 0)" 
               data-h2-display="b(inline-block)">
               <a 
                 href="/{{ locale }}/docs"
                 title=""
-                data-h2-font-color="b:hover(primary) b:dark:hover([lighter]primary)">Docs</a></li>
+                data-h2-font-color="b:hover(primary) b:dark:hover(lighter.primary)">Docs</a></li>
             <li
               data-h2-margin="b(0, x1, 0, 0)" 
               data-h2-display="b(inline-block)">
@@ -36,13 +36,13 @@
                 title=""
                 target="_blank"
                 rel="noreferrer"
-                data-h2-font-color="b:hover(primary) b:dark:hover([lighter]primary)">Github</a></li>
+                data-h2-font-color="b:hover(primary) b:dark:hover(lighter.primary)">Github</a></li>
             <li
               data-h2-display="b(inline-block)">
               <a 
                 href="/"
                 title=""
-                data-h2-font-color="b:hover(primary) b:dark:hover([lighter]primary)">Updates</a></li>
+                data-h2-font-color="b:hover(primary) b:dark:hover(lighter.primary)">Updates</a></li>
           </ul>
         </div>
         <div
@@ -50,7 +50,7 @@
           data-h2-flex-item="b(1of1) m(content)">
           <ul>
             <li data-h2-display="b(inline-block)">
-              <span>version <strong data-h2-font-weight="b(800)" data-h2-font-color="b([darker]primary) b:dark([lighter]primary)">2.0.0</strong></span>
+              <span>version <strong data-h2-font-weight="b(800)" data-h2-font-color="b(darker.primary) b:dark(lighter.primary)">2.0.0</strong></span>
             </li>
             <li
               data-h2-margin="b(0, 0, 0, x1)" 
@@ -65,7 +65,7 @@
                 style="cursor: pointer;"
                 class="mode-toggle"
                 onclick="toggleMode(this)">
-                <div data-h2-bg-color="b(white) b:dark([dark]font)">
+                <div data-h2-bg-color="b(white) b:dark(dark.font)">
                   <img class="sun" src="/static/img/icon-sun.svg" alt="A sun icon representing light mode.">
                   <img class="moon" src="/static/img/icon-moon.svg" alt="A moon icon representing dark mode.">
                 </div>
@@ -82,7 +82,7 @@
                 {# for each item in the loop, check if
                 - its translationKey matches the current item translationKey
                 - its locale matches the code of the language we are looping through #}
-                {% if item.data.translationKey == translationKey and item.data.locale == lgg.code %}
+                {% if item.data.key == key and item.data.locale == lgg.code %}
                   {% set translatedUrl = item.url %}
                 {% endif %}
               {% endfor %}
@@ -93,7 +93,7 @@
                 <a 
                   class="c-lggnav__link" 
                   href="{{ translatedUrl }}"
-                  data-h2-font-color="b:hover(primary) b:dark:hover([lighter]primary)">{{ lgg.label }}</a>
+                  data-h2-font-color="b:hover(primary) b:dark:hover(lighter.primary)">{{ lgg.label }}</a>
               </li>
             {% endfor %}
           </ul>

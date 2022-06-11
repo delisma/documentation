@@ -12,6 +12,8 @@ function toggleMode(element) {
   }
 }
 
+const body = document.querySelector("body");
+
 window.onload = function() {
   if (localStorage.getItem('color-mode') === 'dark') {
     document.querySelector('.mode-toggle').classList.add('active');
@@ -26,4 +28,9 @@ window.onload = function() {
     document.querySelector('body').classList.add('h2-dark');
     document.querySelector('body').classList.remove('h2-light');
   }
+  body.setAttribute("style", `--widthHack: ${body.clientWidth}px`);
+}
+
+window.onresize = function () {
+  body.setAttribute("style", `--widthHack: ${body.clientWidth}px`);
 }

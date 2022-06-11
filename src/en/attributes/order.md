@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: order
+eleventyNavigation:
+  key: Order
+  parent: Attributes
 ---

@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: flex-grid
+eleventyNavigation:
+  key: Flex grid
+  parent: Attributes
 ---

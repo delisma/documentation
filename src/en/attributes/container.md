@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: container
+eleventyNavigation:
+  key: Containers
+  parent: Attributes
 ---

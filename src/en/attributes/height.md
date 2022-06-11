@@ -1,4 +1,6 @@
 ---
-layout: property.njk
 key: height
+eleventyNavigation:
+  key: Height
+  parent: Attributes
 ---

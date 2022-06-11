@@ -1,6 +1,9 @@
 ---
-layout: property.njk
-title: "Les marges | Hydrogen"
+key: margin
+eleventyNavigation:
+  key: Les marges
+  parent: Attributs
+title: Les marges
 ---
 Les marges!
 

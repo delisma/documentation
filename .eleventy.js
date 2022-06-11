@@ -2,8 +2,23 @@ const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
+var exec = require('child_process').execSync;
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
+
+  // Serve from en directory
+  eleventyConfig.setBrowserSyncConfig({
+    startPath: 'en/'
+  });
+  
+  // Run Hydrogen before the eleventy build executes
+  eleventyConfig.on('eleventy.before', async () => {
+    console.log(exec("npx h2-build").toString());
+  });
+
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
@@ -32,8 +47,6 @@ module.exports = function (eleventyConfig) {
     moment.locale(locale);
     return moment(date).format(format);
   });
-
-  eleventyConfig.setWatchThrottleWaitTime(1000); // in milliseconds
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
@@ -103,6 +116,7 @@ module.exports = function (eleventyConfig) {
     //   });
     //   return minified;
     // }
+
 
     return content;
   });
