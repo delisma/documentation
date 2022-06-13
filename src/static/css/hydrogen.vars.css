@@ -68,7 +68,8 @@
 --h2-line-height-h1: 1.0223616000000002;
 /* Note that media query variables are not generated in the CSS variable format because they can't be used inside of media query declarations. */
 /* Radius */
---h2-radius-rounded: 5px;
+--h2-radius-code: 5px;
+--h2-radius-rounded: 20px;
 --h2-radius-pill: 50rem;
 --h2-radius-circle: 100%;
 /* Shadows */

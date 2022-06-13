@@ -147,8 +147,12 @@
   ],
   "radius": [
     {
-      "key": "rounded",
+      "key": "code",
       "radius": "5px"
+    },
+    {
+      "key": "rounded",
+      "radius": "20px"
     },
     {
       "key": "pill",

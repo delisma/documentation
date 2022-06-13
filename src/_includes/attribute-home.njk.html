@@ -38,7 +38,7 @@
         <h2
           data-h2-font-color="b(white)"
           data-h2-margin="b(0)"
-          data-h2-font-size="b(h3)"
+          data-h2-font-size="b(h2)"
           data-h2-font-weight="b(700)">
             {{ title }}
           </h2>
@@ -70,154 +70,273 @@
       <div
         data-h2-width="b(25%) m(x3)"
         data-h2-height="b(x.25)"
-        data-h2-margin="b(0.95rem, auto, auto, auto)"
+        data-h2-margin="b(2rem, auto, auto, auto)"
         data-h2-bg-color="b(primary) b:dark(accent)"
         data-h2-radius="b(pill)"></div>
     </div>
     <div data-h2-flex-item="l(fill)">
       <h3
-        data-h2-font-size="b(h5, 1.3)"
-        data-h2-font-weight="b(700)">Syntax</h3>
-      <div data-h2-flex-grid="b(flex-start, 0, x2, 0)">
-        <div data-h2-flex-item="b(1of2)">
-          <p data-h2-margin="b(x1, auto, auto, auto)">{{ syntaxStatement }}</p>
-          <ul data-h2-margin="b(x1, auto, auto, auto)">
-            {% for value in values %}
-            <li>
-              <code>{{ value.key }}</code>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div data-h2-flex-item="b(1of2)">
-          {% if syntaxCode is string %}
-            <pre
-              data-h2-bg-color="b(dark.font)"
-              data-h2-padding="b(x1)"
-              data-h2-radius="b(rounded)"
-              data-h2-overflow="b(auto, x)"
-              data-h2-margin="b(x1, 0, 0, 0)"
-              data-h2-font-color="b(white)"><code>{{ syntaxCode }}</code></pre>
-          {% else %}
-            {% for item in syntaxCode %}
-              <pre
-                data-h2-bg-color="b(dark.font)"
-                data-h2-padding="b(x1)"
-                data-h2-radius="b(rounded)"
-                data-h2-overflow="b(auto, x)"
-                data-h2-margin="b(x1, 0, 0, 0)"
-                data-h2-font-color="b(white)"><code>{{ item }}</code></pre>
-            {% endfor %}
-          {% endif %}
-        </div>
-        {% for value in values %}
+        data-h2-font-size="b(h3, 1.3)"
+        data-h2-font-weight="b(800)">Syntax</h3>
+      <p data-h2-margin="b(x1, auto, auto, auto)">{{ syntaxSummary | safe }}</p>
+      <div data-h2-flex-grid="b(stretch, 0, x1)">
+        {% for option in syntax %}
           <div data-h2-flex-item="b(1of1)">
-            <h4
-              data-h2-font-size="b(h6, 1.3)"
-              data-h2-margin="b(x2, auto, auto, auto)"
-              data-h2-font-weight="b(700)">{{ value.name }}</h4>
+            <h3
+              data-h2-font-size="b(h4, 1.3)"
+              data-h2-margin="b(x3, auto, auto, auto)"
+              data-h2-font-weight="b(200)">{{ option.label }}</h3>
           </div>
-          <div data-h2-flex-item="b(1of2)">
-            <ul
-              data-h2-margin="b(x1, auto, auto, auto)"
-              data-h2-padding="b(0)" 
-              style="list-style: none;">
-              <li data-h2-display="b(inline-block)">
-                {% if value.required == true %}
-                  <span
-                    data-h2-font-weight="b(700)"
-                    data-h2-font-size="b(caption)"
-                    data-h2-margin="b(auto, x1, auto, auto)"
-                    data-h2-color="b(red)">REQUIRED</span>
-                {% else %}
-                  <span
-                    data-h2-font-weight="b(700)"
-                    data-h2-font-size="b(caption)"
-                    data-h2-margin="b(auto, x1, auto, auto)"
-                    data-h2-color="b(gray)">OPTIONAL</span>
-                {% endif %}
-              </li>
-              <li data-h2-display="b(inline-block)">
-                {% if value.css == true and value.keys == false %}
-                  <span
-                    data-h2-font-weight="b(700)"
-                    data-h2-font-size="b(caption)"
-                    data-h2-margin="b(auto, x1, auto, auto)"
-                    data-h2-font-color="b(gray)">ACCEPTS CSS VALUES ONLY</span>
-                {% elseif value.css == true and value.keys == true %}
-                  <span
-                    data-h2-font-weight="b(700)"
-                    data-h2-font-size="b(caption)"
-                    data-h2-margin="b(auto, x1, auto, auto)"
-                    data-h2-font-color="b(gray)">ACCEPTS KEYS &amp; CSS VALUES</span>
-                {% elseif value.css == false and value.keys == true %}
-                  <span
-                    data-h2-font-weight="b(700)"
-                    data-h2-font-size="b(caption)"
-                    data-h2-margin="b(auto, x1, auto, auto)"
-                    data-h2-color="b(gray)">ACCEPTS KEYS ONLY</span>
-                {% endif %}
-              </li>
-            </ul>
-            {% if value.key == 'color/gradient' or value.key == 'couleur/gradient' %}
-              <p data-h2-margin="b(x1, auto, auto, auto)">Colors and gradients can be specified an in a variety of consistent ways across attributes.</p>
-              <p
-                data-h2-font-weight="b(700)"
-                data-h2-margin="b(x2, auto, auto, auto)" 
-                data-h2-margin="b(x1, auto, auto, auto)">Configured colors</p>
-              <p data-h2-margin="b(x.5, auto, auto, auto)">By defining a color in your configuration, you can access that color by its key value.</p>
-              <p
-                data-h2-font-weight="b(700)"
-                data-h2-margin="b(x2, auto, auto, auto)" 
-                data-h2-margin="b(x1, auto, auto, auto)">Configured gradients</p>
-              <p data-h2-margin="b(x.5, auto, auto, auto)">By defining</p>
-              <p
-                data-h2-font-weight="b(700)"
-                data-h2-margin="b(x2, auto, auto, auto)" 
-                data-h2-margin="b(x1, auto, auto, auto)">CSS colors</p>
-              <p data-h2-margin="b(x.5, auto, auto, auto)">You can totes use CSS colors</p>
-              <div
-                data-h2-margin="b(x2, auto, auto, auto)"
-                data-h2-padding="b(x1)"
-                data-h2-background-color="b(white)"
-                data-h2-radius="b(rounded)"
-                data-h2-shadow="b(l)">
-                <p data-h2-font-weight="b(700)">Please note</p>
-                <p data-h2-margin="b(x.5, auto, auto, auto)">CSS gradient values are not accepted right now.</p>
-              </div>
-            {% elseif value.key == 'color' or value.key == 'couleur' %}
-              <p data-h2-margin="b(x1, auto, auto, auto)">Colors can be specified an in a variety of consistent ways across attributes.</p>
-              <p
-                data-h2-font-weight="b(700)"
-                data-h2-margin="b(x2, auto, auto, auto)" 
-                data-h2-margin="b(x1, auto, auto, auto)">Configured colors</p>
-              <p data-h2-margin="b(x.5, auto, auto, auto)">By defining a color in your configuration, you can access that color by its key value.</p>
-              <p
-                data-h2-font-weight="b(700)"
-                data-h2-margin="b(x2, auto, auto, auto)" 
-                data-h2-margin="b(x1, auto, auto, auto)">CSS colors</p>
-              <p data-h2-margin="b(x.5, auto, auto, auto)">You can totes use CSS colors</p>
-            {% elseif value.key == 'size' %}
-
-            {% else %}
-              <p data-h2-margin="b(x1, auto, auto, auto)">{{ value.description }}</p>
-            {% endif %}
-          </div>
-          <div data-h2-flex-item="b(1of2)">
+          <div data-h2-flex-item="b(1of1)">
             <pre
               data-h2-bg-color="b(dark.font)"
               data-h2-padding="b(x1)"
-              data-h2-radius="b(rounded)"
+              data-h2-radius="b(code)"
               data-h2-overflow="b(auto, x)"
-              data-h2-margin="b(x1, 0, 0, 0)"
-              data-h2-font-color="b(white)"><code>// Example values<br><br>{% for example in value.examples %}{{ example }}<br>{% endfor %}</code></pre>
+              data-h2-margin="b(0)"
+              data-h2-font-color="b(white)"><code>{{ option.code }}</code></pre>
           </div>
+          {% for value in option.values %}
+            <div data-h2-flex-item="b(1of2)">
+              <div
+                data-h2-background-color="b(white) b:dark(dark.font)"
+                data-h2-shadow="b(l)"
+                data-h2-height="b(100%)"
+                data-h2-radius="b(rounded)"
+                data-h2-padding="b(x1.5)">
+                <h4
+                  data-h2-font-size="b(h5, 1.3)"
+                  data-h2-font-weight="b(700)">{{ value.key }}</h4>
+                <ul
+                  data-h2-margin="b(x.5, auto, auto, auto)"
+                  data-h2-padding="b(0)" 
+                  style="list-style: none;">
+                  <li data-h2-display="b(inline-block)">
+                    {% if value.required == true %}
+                      <span
+                        data-h2-font-weight="b(700)"
+                        data-h2-font-size="b(caption)"
+                        data-h2-margin="b(auto, x1, auto, auto)"
+                        data-h2-color="b(primary) b:dark(lighter.primary)">REQUIRED</span>
+                    {% else %}
+                      <span
+                        data-h2-font-weight="b(700)"
+                        data-h2-font-size="b(caption)"
+                        data-h2-margin="b(auto, x1, auto, auto)"
+                        data-h2-color="b(gray)">OPTIONAL</span>
+                    {% endif %}
+                  </li>
+                  <li data-h2-display="b(inline-block)">
+                    {% if value.css == true and value.keys == false %}
+                      <span
+                        data-h2-font-weight="b(700)"
+                        data-h2-font-size="b(caption)"
+                        data-h2-margin="b(auto, x1, auto, auto)"
+                        data-h2-font-color="b(primary) b:dark(lighter.primary)">CSS VALUES ONLY</span>
+                    {% elseif value.css == true and value.keys == true %}
+                      <span
+                        data-h2-font-weight="b(700)"
+                        data-h2-font-size="b(caption)"
+                        data-h2-margin="b(auto, x1, auto, auto)"
+                        data-h2-font-color="b(primary) b:dark(lighter.primary)">KEYS &amp; CSS VALUES</span>
+                    {% elseif value.css == false and value.keys == true %}
+                      <span
+                        data-h2-font-weight="b(700)"
+                        data-h2-font-size="b(caption)"
+                        data-h2-margin="b(auto, x1, auto, auto)"
+                        data-h2-color="b(primary) b:dark(lighter.primary)">KEYS ONLY</span>
+                    {% endif %}
+                  </li>
+                </ul>
+                {% if value.key == 'Color' or value.key == 'Couleur' or value.key == 'Color/gradient' or value.key == 'Couleur/gradient' %}
+                  <p data-h2-margin="b(x1, auto, auto, auto)">Color values can be set by using one of your defined color keys or by using a CSS color value (hex, rgb, etc.).{% if value.key == 'Color/gradient' or value.key == 'Couleur/gradient' %} Gradients must be set using your defined gradient key; CSS gradient syntax is not available.{% endif %}</p>
+                  {# <h5
+                    data-h2-font-weight="b(700)"
+                    data-h2-font-size="b(h6, 1.3)"
+                    data-h2-margin="b(x2, auto, auto, auto)" 
+                    data-h2-margin="b(x1, auto, auto, auto)">Configured colors</h5>
+                  <p data-h2-margin="b(x.5, auto, auto, auto)">By defining a color in your configuration, you can access that color by its key value.</p>
+                  <p data-h2-margin="b(x.5, auto, auto, auto)">These keys also accept modifiers that allow you to access tints, shades, and opacities of the color you defined. For example, if you defined your main brand color as "primary", you can access up to three shades darker by using "dark.primary", "darker.primary", and "darkest.primary".</p>
+                  <p data-h2-margin="b(x.5, auto, auto, auto)">Opacity works in a similar way using a numeric value. For example, you can access a 50% opacity value by using "primary.5". Similarly, you can also access opacity values for modified colors as well, using both modifiers together: "lighter.primary.2".</p> #}
+                  <h6
+                    data-h2-margin="b(x1, auto, auto, auto)"
+                    data-h2-font-weight="b(700)" 
+                    data-h2-font-size="b(copy, 1.3)">Example configured colors</h6>
+                  <ul 
+                    data-h2-margin="b(x.5, auto)"
+                    style="list-style: none;"
+                    data-h2-padding="b(0)">
+                    {% set exampleArray = ['primary', 'accent', 'light.primary', 'accent.5'] %}
+                    {% for item in exampleArray %}
+                      <li 
+                        data-h2-display="b(inline-block)"
+                        data-h2-padding="b(x.25, x1)"
+                        data-h2-background-color="b(black.1) b:dark(light.font.1)"
+                        data-h2-border="b(all, 1px, solid, black) b:dark(all, 1px, solid, light.font)"
+                        data-h2-margin="b(auto, auto, 4px, auto)"
+                        data-h2-radius="b(pill)"
+                        data-h2-font-size="b(caption)">
+                        <code>{{ item }}</code>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  {# <h5
+                    data-h2-font-weight="b(700)"
+                    data-h2-font-size="b(h6, 1.3)"
+                    data-h2-margin="b(x2, auto, auto, auto)" 
+                    data-h2-margin="b(x1, auto, auto, auto)">CSS colors</h5>
+                  <p data-h2-margin="b(x.5, auto, auto, auto)">Values that accept colors also allow you to enter any old CSS color in your preferred format.</p> #}
+                  <h6
+                    data-h2-margin="b(x1, auto, auto, auto)"
+                    data-h2-font-weight="b(700)" 
+                    data-h2-font-size="b(copy, 1.3)">Example CSS colors</h6>
+                  <ul 
+                    data-h2-margin="b(x.5, auto)"
+                    style="list-style: none;"
+                    data-h2-padding="b(0)">
+                    {% set exampleArray = ['blue', '#9d5cff', 'rgba(255, 45, 60, 1)'] %}
+                    {% for item in exampleArray %}
+                      <li 
+                        data-h2-display="b(inline-block)"
+                        data-h2-padding="b(x.25, x1)"
+                        data-h2-background-color="b(black.1) b:dark(light.font.1)"
+                        data-h2-border="b(all, 1px, solid, black) b:dark(all, 1px, solid, light.font)"
+                        data-h2-margin="b(auto, auto, 4px, auto)"
+                        data-h2-radius="b(pill)"
+                        data-h2-font-size="b(caption)">
+                        <code>{{ item }}</code>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  {% if value.key == 'Color/gradient' or value.key == 'Couleur/gradient' %}
+                    {# <h5
+                      data-h2-font-weight="b(700)"
+                      data-h2-font-size="b(h6, 1.3)"
+                      data-h2-margin="b(x2, auto, auto, auto)" 
+                      data-h2-margin="b(x1, auto, auto, auto)">Configured gradients</h5>
+                    <p data-h2-margin="b(x.5, auto, auto, auto)">Similar to colors, you can define reusable gradients in your configuration file and access them using their key. It's important that gradients have unique keys from all of your configured colors, otherwise Hydrogen will provide an error letting you know that you have a duplicate.</p> #}
+                    <h6
+                      data-h2-margin="b(x1, auto, auto, auto)"
+                      data-h2-font-weight="b(700)" 
+                      data-h2-font-size="b(copy, 1.3)">Example configured gradients</h6>
+                    <ul 
+                      data-h2-margin="b(x.5, auto)"
+                      style="list-style: none;"
+                      data-h2-padding="b(0)">
+                      {% set exampleArray = ['myLinearGradient', 'myRadialGradient'] %}
+                      {% for item in exampleArray %}
+                        <li 
+                          data-h2-display="b(inline-block)"
+                          data-h2-padding="b(x.25, x1)"
+                          data-h2-background-color="b(black.1) b:dark(light.font.1)"
+                          data-h2-border="b(all, 1px, solid, black) b:dark(all, 1px, solid, light.font)"
+                          data-h2-margin="b(auto, auto, 4px, auto)"
+                          data-h2-radius="b(pill)"
+                          data-h2-font-size="b(caption)">
+                          <code>{{ item }}</code>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                    {# <div
+                      data-h2-margin="b(x2, auto, auto, auto)"
+                      data-h2-padding="b(x1)"
+                      data-h2-background-color="b(white) b:dark(dark.font)"
+                      data-h2-radius="b(rounded)"
+                      data-h2-shadow="b(l)">
+                      <p data-h2-font-weight="b(700)">Please note</p>
+                      <p data-h2-margin="b(x.5, auto, auto, auto)">CSS gradient values are not accepted right now.</p>
+                    </div> #}
+                  {% endif %}
+                {% elseif value.key == 'Padding' or value.key == 'Size' or value.key == 'Width' %}
+                  <p data-h2-margin="b(x1, auto, auto, auto)">Space values can be set using Hydrogen's automated space multipliers or by using CSS units (px, rem, etc.).</p>
+                  {# <h5
+                    data-h2-font-weight="b(700)"
+                    data-h2-font-size="b(h6, 1.3)"
+                    data-h2-margin="b(x2, auto, auto, auto)" 
+                    data-h2-margin="b(x1, auto, auto, auto)">Hydrogen space multipliers</h5>
+                  <p data-h2-margin="b(x.5, auto, auto, auto)">Hydrogen automatically generates a vertical rhythm for you based on your current line height settings. This means that you have access to helpful multiplier values that will set an amount of space based on your line height for a consistent look and feel. For example, "x2" will set space equal to 2 times your line height.</p> #}
+                  <h5
+                    data-h2-margin="b(x1, auto, auto, auto)" 
+                    data-h2-font-weight="b(700)"
+                    data-h2-font-size="b(copy, 1.3)">Example multiplier values</h5>
+                  <ul 
+                    data-h2-margin="b(x.5, auto)"
+                    style="list-style: none;"
+                    data-h2-padding="b(0)">
+                    {% set exampleArray = ['x1', 'x2.5', 'x5'] %}
+                    {% for item in exampleArray %}
+                      <li 
+                        data-h2-display="b(inline-block)"
+                        data-h2-padding="b(x.25, x1)"
+                        data-h2-background-color="b(black.1) b:dark(light.font.1)"
+                        data-h2-border="b(all, 1px, solid, black) b:dark(all, 1px, solid, light.font)"
+                        data-h2-margin="b(auto, auto, 4px, auto)"
+                        data-h2-radius="b(pill)"
+                        data-h2-font-size="b(caption)">
+                        <code>{{ item }}</code>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  {# <h5
+                    data-h2-font-weight="b(700)"
+                    data-h2-font-size="b(h6, 1.3)"
+                    data-h2-margin="b(x2, auto, auto, auto)" 
+                    data-h2-margin="b(x1, auto, auto, auto)">CSS units</h5>
+                  <p data-h2-margin="b(x.5, auto, auto, auto)">Alternatively, you can also use standard CSS units for space. This means anything from pixel values to rem units.</p> #}
+                  <h5
+                    data-h2-margin="b(x1, auto, auto, auto)" 
+                    data-h2-font-weight="b(700)"
+                    data-h2-font-size="b(copy, 1.3)">Example CSS units</h5>
+                  <ul 
+                    data-h2-margin="b(x.5, auto)"
+                    style="list-style: none;"
+                    data-h2-padding="b(0)">
+                    {% set exampleArray = ['50px', '3rem', '20vw'] %}
+                    {% for item in exampleArray %}
+                      <li 
+                        data-h2-display="b(inline-block)"
+                        data-h2-padding="b(x.25, x1)"
+                        data-h2-background-color="b(black.1) b:dark(light.font.1)"
+                        data-h2-border="b(all, 1px, solid, black) b:dark(all, 1px, solid, light.font)"
+                        data-h2-margin="b(auto, auto, 4px, auto)"
+                        data-h2-radius="b(pill)"
+                        data-h2-font-size="b(caption)">
+                        <code>{{ item }}</code>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <p data-h2-margin="b(x1, auto, auto, auto)">{{ value.description | safe }}</p>
+                  <h5
+                    data-h2-margin="b(x1, auto, auto, auto)" 
+                    data-h2-font-weight="b(700)"
+                    data-h2-font-size="b(copy, 1.3)">Example values</h5>
+                  <ul 
+                    data-h2-margin="b(x.5, auto)"
+                    style="list-style: none;"
+                    data-h2-padding="b(0)">
+                    {% for example in value.examples %}
+                      <li 
+                        data-h2-display="b(inline-block)"
+                        data-h2-padding="b(x.25, x1)"
+                        data-h2-background-color="b(black.1) b:dark(light.font.1)"
+                        data-h2-border="b(all, 1px, solid, black) b:dark(all, 1px, solid, light.font)"
+                        data-h2-margin="b(auto, auto, 4px, auto)"
+                        data-h2-radius="b(pill)"
+                        data-h2-font-size="b(caption)">
+                        <code>{{ example }}</code>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
         {% endfor %}
       </div>
     </div>
   </div>
 </div>
-<div data-h2-background-color="b(blue)"></div>
 {% if examples == true %}
   <div data-h2-margin="b(x4, auto, 0, auto)">
     <div data-h2-flex-grid="b(flex-start, 0, x2, 0)">

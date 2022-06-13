@@ -43,17 +43,17 @@
           <li data-h2-font-color="b(dark.font) b:dark(white)">Configuration</li>
           <li data-h2-font-color="b(dark.font) b:dark(white)">
             Attributes
-            <ul>
+            <ul data-h2-display="b(none)">
               {% set propertyCollection = collections["attributes_" + locale + "_asc"] %}
               {% for prop in propertyCollection %}
                 {% for item in attributes[locale] %}
                   {% if prop.data.key == item.key %}
-                      <li>
-                        <a
-                          href="{{ prop.url | url }}"
-                          data-h2-font-color="b:hover(primary) b:dark:hover(lighter.primary)"
-                          title="{{ item.linkTitle }}">{{ item.title | lower }}</a>
-                      </li>
+                    <li>
+                      <a
+                        href="{{ prop.url | url }}"
+                        data-h2-font-color="b:hover(primary) b:dark:hover(lighter.primary)"
+                        title="{{ item.linkTitle }}">{{ item.title | lower }}</a>
+                    </li>
                   {% endif %}
                 {% endfor %}
               {% endfor %}

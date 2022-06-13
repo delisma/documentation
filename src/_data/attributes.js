@@ -19,7 +19,7 @@ module.exports = {
       linkTitle: ""
     },
     {
-      key: "bg-color",
+      key: "background-color",
       title: "Background color",
       group: "basic",
       linkTitle: ""
@@ -73,7 +73,7 @@ module.exports = {
       linkTitle: ""
     },
     {
-      key: "font-color",
+      key: "color",
       title: "Font color",
       group: "font",
       linkTitle: ""
