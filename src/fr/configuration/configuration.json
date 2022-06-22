@@ -1,3 +1,0 @@
-{
-  "permalink": "/{{ locale }}/{{ site[locale].postNames.configuration }}/{{ page.fileSlug }}/"
-}

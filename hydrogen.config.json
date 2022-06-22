@@ -1,8 +1,15 @@
 {
+  "info": {
+    "docs": "https://beta.hydrogen.design",
+    "settings": "https://beta.hydrogen.design/settings",
+    "code": "https://github.com/hydrogen-design-system/hydrogen",
+    "roadmap": "https://github.com/orgs/hydrogen-design-system/projects/1"
+  },
+  "debug": false,
   "input": [
     "src/_includes"
   ],
-  "output": "src/static/css",
+  "output": "_site/static/css",
   "variables": {
     "css": true,
     "sass": false
@@ -152,7 +159,7 @@
     },
     {
       "key": "rounded",
-      "radius": "20px"
+      "radius": "10px"
     },
     {
       "key": "pill",
@@ -214,15 +221,9 @@
     },
     {
       "size": "112.5%",
-      "lineHeight": "1.3",
+      "lineHeight": "1.4",
       "queryKey": "m",
-      "typeScale": "1.33"
-    },
-    {
-      "size": "118%",
-      "lineHeight": "1.3",
-      "queryKey": "l",
-      "typeScale": "1.33"
+      "typeScale": "1.2"
     }
   ]
 }

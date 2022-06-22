@@ -52,7 +52,7 @@ pre code {
 }
 
 .mode-toggle.active>div {
-  transform: translate(90%, -50%);
+  transform: translate(105%, -50%);
   transition: all .2s ease;
 }
 

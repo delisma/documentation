@@ -38,7 +38,6 @@
         <h2
           data-h2-font-color="b(white)"
           data-h2-margin="b(0)"
-          data-h2-font-size="b(h2)"
           data-h2-font-weight="b(700)">
             {{ title }}
           </h2>
@@ -97,7 +96,11 @@
               data-h2-font-color="b(white)"><code>{{ option.code }}</code></pre>
           </div>
           {% for value in option.values %}
-            <div data-h2-flex-item="b(1of2)">
+            {% if option.values | length == 1  %}
+              <div data-h2-flex-item="b(1of1)">
+            {% else %}
+              <div data-h2-flex-item="b(1of2)">
+            {% endif %}
               <div
                 data-h2-background-color="b(white) b:dark(dark.font)"
                 data-h2-shadow="b(l)"

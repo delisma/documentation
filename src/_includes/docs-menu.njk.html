@@ -11,7 +11,7 @@
       data-h2-overflow="b(auto, y)"
       data-h2-max-height="b(75vh)">
         <h1
-          data-h2-font-size="b(h4)"
+          data-h2-font-size="b(h2)"
           data-h2-font-weight="b(800)"
           data-h2-font-color="b(dark.font) b:dark(white)"
           data-h2-text-align="b(center)">Hydrogen</h1>
@@ -23,7 +23,7 @@
           <input 
             data-h2-border="b(all, 1px, solid, black)"
             data-h2-display="b(block)"
-            data-h2-radius="b(rounded)"
+            data-h2-radius="b(code)"
             data-h2-padding="b(x.5, x1)"
             data-h2-font-size="b(copy)"
             data-h2-width="b(100%)"
@@ -31,18 +31,28 @@
             placeholder="Find something...">
         </form>
         <ul data-h2-padding="b(x2, 0, 0, x1)">
-          <li data-h2-font-color="b(dark.font) b:dark(white)">Documentation</li>
+          <li data-h2-font-color="b(dark.font) b:dark(white)">
+            <a href="/en/docs">Documentation</a>
+          </li>
           <li data-h2-font-color="b(dark.font) b:dark(white)">
             Setup
             <ul data-h2-padding="b(0, 0, 0, x1)">
-              <li data-h2-font-color="b(dark.font) b:dark(white)">Installation</li>
-              <li data-h2-font-color="b(dark.font) b:dark(white)">Commands</li>
-              <li data-h2-font-color="b(dark.font) b:dark(white)">Basic usage</li>
+              <li data-h2-font-color="b(dark.font) b:dark(white)">
+                <a href="/en/docs/setup/installation">Installation</a>
+              </li>
+              <li data-h2-font-color="b(dark.font) b:dark(white)">
+                <a href="/en/docs/setup/commands">Commands</a>
+              </li>
+              <li data-h2-font-color="b(dark.font) b:dark(white)">
+                <a href="/en/docs/setup/configuration">Configuration</a>
+              </li>
+              <li data-h2-font-color="b(dark.font) b:dark(white)">
+                <a href="/en/docs/setup/syntax">Syntax</a>
+              </li>
             </ul>
           </li>
-          <li data-h2-font-color="b(dark.font) b:dark(white)">Configuration</li>
           <li data-h2-font-color="b(dark.font) b:dark(white)">
-            Attributes
+            <a href="/en/docs/attributes">Attributes</a>
             <ul data-h2-display="b(none)">
               {% set propertyCollection = collections["attributes_" + locale + "_asc"] %}
               {% for prop in propertyCollection %}

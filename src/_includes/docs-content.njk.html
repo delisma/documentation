@@ -1,0 +1,158 @@
+{% for item in sections %}
+  <div data-h2-margin="b(x4, auto, 0, auto)">
+    <div data-h2-flex-grid="b(flex-start, 0, x2, 0)">
+      <div data-h2-flex-item="b(content)">
+        <div
+          data-h2-width="b(25%) m(x3)"
+          data-h2-height="b(x.25)"
+          data-h2-margin="b(1.2rem, auto, auto, auto)"
+          data-h2-bg-color="b(primary) b:dark(accent)"
+          data-h2-radius="b(pill)"></div>
+      </div>
+      <div data-h2-flex-item="l(fill)">
+        <h3
+          data-h2-font-size="b(h3, 1.3)"
+          data-h2-font-weight="b(800)"
+          data-h2-margin="b(auto, auto, x2, auto)"
+          id="{{ item.title.id }}">
+          {{ item.title.text }}
+          <a
+            data-h2-color="b(lightest.black) b:hover(primary)"
+            data-h2-transition="b(color, .2s, ease, 0s)"
+            data-h2-font-size="b(copy)"
+            data-h2-vertical-align="b(middle)" 
+            href="{{ page.url }}#{{ item.title.id }}" title="">#</a>
+        </h3>
+        {% for item in item.content %}
+          {% if item.title and loop.first %}
+            <h4
+              data-h2-font-weight="b(200)" 
+              data-h2-margin="b(0, 0, x1, 0)"
+              id="{{ item.title.id }}">
+              {{ item.title.text }}
+              <a
+                data-h2-color="b(lightest.black) b:hover(primary)"
+                data-h2-transition="b(color, .2s, ease, 0s)"
+                data-h2-font-size="b(copy)"
+                data-h2-vertical-align="b(middle)" 
+                href="{{ page.url }}#{{ item.title.id }}" title="">#</a>
+            </h4>
+          {% elseif item.title %}
+            <h4
+              data-h2-font-weight="b(200)" 
+              data-h2-margin="b(x2, 0, x1, 0)"
+              id="{{ item.title.id }}">
+              {{ item.title.text }}
+              <a
+                data-h2-color="b(lightest.black) b:hover(primary)"
+                data-h2-transition="b(color, .2s, ease, 0s)"
+                data-h2-font-size="b(copy)"
+                data-h2-vertical-align="b(middle)" 
+                href="{{ page.url }}#{{ item.title.id }}" title="">#</a>
+            </h4>
+          {% endif %}
+          {% if item.code and item.code.type == "command" %}
+            {% for item in item.copy %}
+              <p data-h2-margin="b(x1, 0)">{{ item | safe }}</p>
+            {% endfor %}
+            {% if item.list %}
+              <ul data-h2-margin="b(0, 0, x1, 0)">
+                {% for item in item.list %}
+                  <li>{{ item | safe }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% include "components/code.njk.html" %}
+          {% elseif item.code and item.code.type == "block" %}
+            <div data-h2-flex-grid="b(flex-start, 0, x3, 0)">
+              <div data-h2-flex-item="b(1of1) m(1of2)">
+                {% for item in item.copy %}
+                  <p {% if loop.first %}data-h2-margin="b(0, 0, x1, 0)"{% elseif loop.last %}data-h2-margin="b(x1, 0, 0, 0)"{% else %}data-h2-margin="b(x1, 0)"{% endif %}>{{ item | safe }}</p>
+                {% endfor %}
+                {% if item.list %}
+                  <ul data-h2-margin="b(0, 0, x1, 0)">
+                    {% for item in item.list %}
+                      <li>{{ item | safe }}</li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+              <div data-h2-flex-item="b(1of1) m(1of2)">
+                {% if item.code %}
+                  {% include "components/code.njk.html" %}
+                {% endif %}
+              </div>
+            </div>
+          {% else %}
+            {% for item in item.copy %}
+              <p data-h2-margin="b(x1, 0)">{{ item | safe }}</p>
+            {% endfor %}
+            {% if item.list %}
+              <ul data-h2-margin="b(0, 0, x1, 0)">
+                {% for item in item.list %}
+                  <li>{{ item | safe }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>  
+  </div>
+{% endfor %}
+{% if steps %}
+  <div data-h2-margin="b(x4, auto, 0, auto)">
+    <div data-h2-flex-grid="b(flex-start, 0, x2, 0)">
+      <div data-h2-flex-item="b(content)">
+        <div
+          data-h2-width="b(25%) m(x3)"
+          data-h2-height="b(0px)"></div>
+      </div>
+      <div data-h2-flex-item="l(fill)">
+        <hr data-h2-margin="b(0, 0, x4, 0)">
+        <div data-h2-flex-grid="b(center, 0, x3)">
+          <div data-h2-flex-item="b(1of2)">
+            {% if steps.previous != null %}
+              <p
+                data-h2-text-transform="b(uppercase)"
+                data-h2-font-size="b(caption)"
+                data-h2-font-weight="b(700)"
+                data-h2-color="b(lighter.black)">Previously</p>
+              <a
+                href="{{ steps.previous.link }}"
+                title="{{ steps.previous.title }}"
+                data-h2-text-decoration="b(none)"
+                data-h2-font-weight="b(700)"
+                data-h2-color="b(primary) b:dark(lighter.primary)">
+                <span
+                  data-h2-font-size="b(h6, 1.3)" 
+                  data-h2-text-decoration="b(underline)"
+                  data-h2-margin="b(0, x.5, 0, 0)">{{ steps.previous.label }}</span><span data-h2-font-size="b(h6, 1.3)">&#187;</span>
+              </a>
+            {% endif %}
+          </div>
+          <div data-h2-flex-item="b(1of2)">
+            {% if steps.next != null %}
+              <p
+                data-h2-text-transform="b(uppercase)"
+                data-h2-font-size="b(caption)"
+                data-h2-font-weight="b(700)"
+                data-h2-color="b(lighter.black)">Up next</p>
+              <a
+                href="{{ steps.next.link }}"
+                title="{{ steps.next.title }}"
+                data-h2-text-decoration="b(none)"
+                data-h2-font-weight="b(700)"
+                data-h2-color="b(primary) b:dark(lighter.primary)">
+                <span
+                  data-h2-font-size="b(h6, 1.3)" 
+                  data-h2-text-decoration="b(underline)"
+                  data-h2-margin="b(0, x.5, 0, 0)">{{ steps.next.label }}</span><span data-h2-font-size="b(h6, 1.3)">&#187;</span>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+{% endif %}
