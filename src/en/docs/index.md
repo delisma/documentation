@@ -3,6 +3,6 @@ layout: docs.njk
 eleventyNavigation:
   key: Docs
   parent: Home
-title: Hydrogen documentation
+title: Documentation
 key: docs
 ---

@@ -25,7 +25,7 @@ sections:
     content: 
       - copy: 
           - "The build script is what you'll use most when developing with Hydrogen. When executed, it runs the following to build your CSS:"
-      - list:
+        list:
           - Check to see if your configuration file is missing anything
           - Create CSS/Sass variable files for you if you've configured them
           - Scrape your markup for Hydrogen attributes
@@ -33,8 +33,8 @@ sections:
           - Run the resulting CSS through <a href="https://github.com/postcss/autoprefixer" title="Learn about Autoprefixer and its helpful additions for maintaining browser support." target="_blank" rel="noreferrer">Autoprefixer</a> and a very <a href="https://github.com/cssnano/cssnano" title="Learn about how Hydrogen uses PostCSS and CSSnano to minify its output." target="_blank" rel="noreferrer">light minification</a>
           - Create the final Hydrogen file
       - copy:
-        - The build script will also log any potential errors, typos, or warnings it finds to your console, so keep an eye out for them. If you need more robust debugging, you can <a href="/en/docs/setup/configuration#debugging" title="Learn about enabling debug mode to help solve compiling errors.">enable log files in your configuration file using the debug setting</a>.
-      - code:
+          - The build script will also log any potential errors, typos, or warnings it finds to your console, so keep an eye out for them. If you need more robust debugging, you can <a href="/en/docs/setup/configuration#debugging" title="Learn about enabling debug mode to help solve compiling errors.">enable log files in your configuration file using the debug setting</a>.
+        code:
           type: command
           content: 
             - npx h2-build

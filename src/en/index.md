@@ -2,6 +2,6 @@
 layout: home.njk
 eleventyNavigation:
   key: Home
-title: Hydrogen
+title: Home
 key: home
 ---
