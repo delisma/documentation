@@ -9,18 +9,19 @@ syntaxSummary: Background colors are set using the <strong>data-h2-background-co
 syntax:
   - code: data-h2-background-color="media(color/gradient)"
     label: Standard values
-    description: "The standard syntax requires the following:"
+    description: 'The standard syntax requires the following:'
     values:
       - key: Color/gradient
         required: true
         keys: true
         css: true
-        description: 
+        description:
         examples:
           - primary
           - accent
           - rgba(40, 30, 60)
-          - "#4d2680"
+          - '#4d2680'
 examples: true
 ---
-{% include "examples/bg-color.njk.html" %}
+
+{% include "examples/bg-color.njk" %}

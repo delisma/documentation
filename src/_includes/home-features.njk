@@ -1,0 +1,65 @@
+<div
+  data-h2-container="base(center, large)"
+  data-h2-padding="base(0, x1) l-tablet(0, x5)"
+  data-h2-margin="base(x3, auto, 0, auto) l-tablet(x5, auto, 0, auto)">
+  <div data-h2-text-align="base(center) l-tablet(left)" data-h2-flex-grid="base(center, 0, x2)">
+    <div data-h2-flex-item="base(1of1) l-tablet(content)">
+      <img src="/static/img/icon-robot.svg" alt="{{ home[locale].features.iconAlt }}" data-h2-width="base(25%) p-tablet(15%) l-tablet(x3)" data-h2-display="base(inline-block)" data-h2-margin="base(5px, 0, 0, 0)" class="section-icon"></div>
+      <div data-h2-flex-item="base(1of1) l-tablet(fill)">
+        <h2 data-h2-margin="base(0)" data-h2-font-color="base(dark.font) base:dark(white)" data-h2-font-weight="base(800)">
+          {{ home[locale].features.title }}
+        </h2>
+      </div>
+    </div>
+    {% for item in home[locale].features.features %}
+      <div data-h2-margin="base(x2, 0, 0, 0) l-tablet(x3, 0, 0, 0)">
+        <div data-h2-flex-grid="base(flex-start, 0, 0, x1) l-tablet(flex-start, 0, x2, x.5)">
+          <div data-h2-flex-item="base(1of1) l-tablet(content)">
+            <div
+              data-h2-width="base(25%) l-tablet(x3)"
+              data-h2-height="base(x.25)"
+              data-h2-margin="base(.75rem, auto, auto, auto)"
+              data-h2-bg-color="base(primary) base:dark(accent)"
+              data-h2-radius="base(pill)"></div>
+          </div>
+          <div data-h2-flex-item="base(1of1) l-tablet(fill)">
+            <p data-h2-font-weight="base(700)" data-h2-margin="base(auto, auto, x1, auto)" data-h2-font-size="base(h6, 1.3)">{{ item.title }}</p>
+            <div data-h2-flex-grid="base(flex-start, 0, x2)">
+              <div data-h2-flex-item="base(1of1) l-tablet(1of2)">
+                {% for item in item.content %}
+                  <p data-h2-margin="base(0)" data-h2-width="l-tablet(90%)">{{ item }}</p>
+                {% endfor %}
+              </div>
+              {% if item.code %}
+                <div data-h2-flex-item="base(1of1) l-tablet(1of2)">
+                  <pre
+                  data-h2-bg-color="base(dark.font)"
+                  data-h2-padding="base(x1)"
+                  data-h2-radius="base(code)"
+                  data-h2-overflow="base(auto, x)"
+                  data-h2-margin="base(0)"
+                  data-h2-font-color="base(white)"><code>{% for item in item.code %}{{ item }}<br>{% endfor %}</code></pre>
+                </div>
+              {% elseif item.link %}
+                <div data-h2-flex-item="base(1of1) l-tablet(1of2)" data-h2-text-align="base(center)">
+                  <a href="{{ item.link.url }}" title="{{ item.link.title }}" data-h2-display="base(block)" data-h2-bg-color="base(white) base:dark(dark.font)" data-h2-radius="base(rounded)" data-h2-shadow="base(s) base:hover(xl)" data-h2-padding="base(x1, x2)" data-h2-font-color="base(darker.primary) base:hover(primary) base:dark(white) base:dark:hover(lighter.primary)" data-h2-font-weight="base(800)" data-h2-transition="base:hover(box-shadow, default, ease, none) base(box-shadow, default, ease, none)">{{ item.link.label }}</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    <div data-h2-margin="base(x3, 0, 0, 0) l-tablet(x4, 0, 0, 0)">
+      <div data-h2-flex-grid="base(flex-start, 0, 0, x2) l-tablet(flex-start, 0, x2)">
+        {% for item in home[locale].otherFeatures %}
+          <div data-h2-flex-item="base(1of1) l-tablet(1of2) laptop(1of4)">
+            <p data-h2-font-weight="base(700)">{{ item.title }}</p>
+            {% for item in item.content %}
+              <p data-h2-margin="base(x.5, auto, auto, auto)">{{ item }}</p>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <hr data-h2-margin="base(x3, 0) l-tablet(x5, 0)"></div>

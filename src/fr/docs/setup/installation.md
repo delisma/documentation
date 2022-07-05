@@ -1,5 +1,5 @@
 ---
-layout: installation.njk
+layout: docs.njk
 eleventyNavigation:
   key: Installation
   parent: Setup

@@ -11,7 +11,7 @@
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
-    "@hydrogen-design-system/hydrogen.css": "^2.0.0-beta.14",
+    "@hydrogen-design-system/hydrogen.css": "^2.0.0-beta.18",
     "alpinejs": "^3.10.2",
     "cross-env": "^7.0.2",
     "html-minifier": "^4.0.0",
@@ -34,5 +34,10 @@
   "bugs": {
     "url": "https://github.com/hydrogen-design-system/documentation/issues"
   },
-  "homepage": "https://github.com/hydrogen-design-system/documentation#readme"
+  "homepage": "https://github.com/hydrogen-design-system/documentation#readme",
+  "prettier": {
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "singleAttributePerLine": true
+  }
 }

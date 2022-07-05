@@ -1,0 +1,115 @@
+{% for section in sections %}
+  <div data-h2-margin="base(x3, auto, 0, auto) laptop(x4, auto, 0, auto)">
+    <div data-h2-flex-grid="base(flex-start, 0, x2, 0)">
+      <div data-h2-flex-item="base(1of1) p-tablet(content)">
+        <div
+          data-h2-width="base(25%) p-tablet(x3)"
+          data-h2-height="base(x.25)"
+          data-h2-margin="
+            base(0, auto, x1, auto) 
+            p-tablet(.75rem, auto, 0, auto) 
+            l-tablet(.9rem, auto, 0, auto)
+          "
+          data-h2-bg-color="base(primary) base:dark(accent)"
+          data-h2-radius="base(pill)">
+        </div>
+      </div>
+      <div data-h2-flex-item="base(1of1) p-tablet(fill)">
+        {% if section.title %}
+          {% include "components/docs-content-h3.njk" %}
+        {% endif %}
+        {% if section.content %}
+          {% include "components/docs-content-loop.njk" %}
+        {% endif %}
+        {% if section.sections %}
+          {% for section in section.sections %}
+            {% if section.title %}
+              {% include "components/docs-content-h4.njk" %}
+            {% endif %}
+            {% if key === "docs" %}
+              {% include "patterns/docs-home-changes.njk" %}
+            {% endif %}
+            {% if section.content %}
+              {% include "components/docs-content-loop.njk" %}
+            {% endif %}
+            {% if section.sections %}
+              {% for section in section.sections %}
+                {% if section.title %}
+                  {% include "components/docs-content-h5.njk" %}
+                {% endif %}
+                {% if section.content %}
+                  {% include "components/docs-content-loop.njk" %}
+                {% endif %}
+                {% if section.sections %}
+                  {% for section in section.sections %}
+                    {% if section.title %}
+                      {% include "components/docs-content-h6.njk" %}
+                    {% endif %}
+                    {% if section.content %}
+                      {% include "components/docs-content-loop.njk" %}
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+{% if steps %}
+  <div data-h2-margin="base(x2, auto, 0, auto)">
+    <div data-h2-flex-grid="base(flex-start, 0, x2, 0)">
+      <div
+        data-h2-display="base(none) p-tablet(block)" 
+        data-h2-flex-item="base(1of1) p-tablet(content)">
+        <div data-h2-width="base(25%) p-tablet(x3)" data-h2-height="base(0px)"></div>
+      </div>
+      <div data-h2-flex-item="base(1of1) p-tablet(fill)">
+        <hr
+          data-h2-height="base(1px)"
+          data-h2-border="base(all, 0px, solid, transparent)"
+          data-h2-background-color="base(lightest.black)" 
+          data-h2-margin="base(0, 0, x3, 0)"/>
+        <div data-h2-flex-grid="base(flex-start, 0, x1) p-tablet(flex-start, 0, x2) laptop(flex-start, 0, x3)">
+          <div data-h2-flex-item="base(1of2)">
+            {% if steps.previous != null %}
+              <p
+                data-h2-text-transform="base(uppercase)"
+                data-h2-font-size="base(caption)"
+                data-h2-font-weight="base(700)"
+                data-h2-margin="base(0, 0, 0, x1.2)"
+                data-h2-color="base(lighter.black)">
+                Previously
+              </p>
+              <a href="{{ steps.previous.link }}" title="{{ steps.previous.title }}" data-h2-text-decoration="base(none)" data-h2-font-weight="base(700)" data-h2-color="base(dark.primary) base:hover(dark.font) base:dark(lighter.primary) base:dark:hover(light.font)" data-h2-transition="base(color, .2s, ease, 0s)">
+                <span data-h2-font-size="base(h6, 1)">&#171;</span>
+                <span data-h2-font-size="base(h6, 1)" data-h2-text-decoration="base(underline)" data-h2-margin="base(0, 0, 0, x.5)">{{ steps.previous.label }}</span>
+              </a>
+            {% endif %}
+          </div>
+          <div
+            data-h2-text-align="base(right)" 
+            data-h2-flex-item="base(1of2)">
+            {% if steps.next != null %}
+              <p
+                data-h2-text-transform="base(uppercase)"
+                data-h2-font-size="base(caption)"
+                data-h2-font-weight="base(700)"
+                data-h2-margin="base(0, x1.2, 0, 0)"
+                data-h2-color="base(lighter.black)">
+                Up next
+              </p>
+              <a href="{{ steps.next.link }}" title="{{ steps.next.title }}" data-h2-text-decoration="base(none)" data-h2-font-weight="base(700)" data-h2-color="base(dark.primary) base:hover(dark.font) base:dark(lighter.primary) base:dark:hover(light.font)" data-h2-transition="base(color, .2s, ease, 0s)">
+                <span data-h2-font-size="base(h6, 1)" data-h2-text-decoration="base(underline)" data-h2-margin="base(0, x.5, 0, 0)">{{ steps.next.label }}</span>
+                <span data-h2-font-size="base(h6, 1)">&#187;</span>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

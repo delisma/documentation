@@ -9,7 +9,7 @@ syntaxSummary: Align items is set using the <strong>data-h2-align-items</strong>
 syntax:
   - code: data-h2-align-items="media(alignment)"
     label: Standard values
-    description: "The standard syntax requires the following:"
+    description: 'The standard syntax requires the following:'
     values:
       - key: Alignment
         required: true
@@ -22,4 +22,5 @@ syntax:
           - flex-end
 examples: false
 ---
-{% include "examples/align-items.njk.html" %}
+
+{% include "examples/align-items.njk" %}

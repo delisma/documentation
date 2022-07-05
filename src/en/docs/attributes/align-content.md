@@ -9,7 +9,7 @@ syntaxSummary: Align content is set using the <strong>data-h2-align-content</str
 syntax:
   - code: data-h2-align-content="media(alignment)"
     label: Standard values
-    description: "The standard syntax requires the following:"
+    description: 'The standard syntax requires the following:'
     values:
       - key: Alignment
         required: true
@@ -22,4 +22,5 @@ syntax:
           - flex-end
 examples: true
 ---
-{% include "examples/align-content.njk.html" %}
+
+{% include "examples/align-content.njk" %}
