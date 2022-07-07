@@ -1,0 +1,113 @@
+<div
+  data-h2-bg-color="base(white) base:dark(dark.font)"
+  data-h2-padding="base(x1, 0) l-tablet(x.5, 0)"
+  {% if key === "home" %} 
+    data-h2-layer="base(3, sticky)"
+    data-h2-offset="base(0, auto, auto, auto)"
+    data-h2-shadow="base(xl)"
+  {% else %}
+    data-h2-layer="base(3, relative)"
+  {% endif %}>
+  <div
+    {% if key === "home" %} 
+      data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)"
+    {% else %}
+      data-h2-container="base(center, large, x1) p-tablet(center, large, x2)"
+    {% endif %}>
+      <div data-h2-flex-grid="base(center,0,x1)">
+        <div data-h2-flex-item="base(auto)">
+          <ul
+            {% if key === "home" %}
+              id="nav"
+            {% endif %} 
+            data-h2-padding="base(0)">
+            {% if key === "home" %}
+              {% for item in homeNav %}
+                <li
+                  data-h2-margin="base(0,x1,0,0)" 
+                  data-h2-display="base(inline-block)">
+                  <a 
+                    href="{{ item.link }}"
+                    title="{{ item.title }}"
+                    {% if item.id === "home" %}
+                      data-h2-font-weight="base(800)"
+                      data-h2-text-decoration="base(none)"
+                      data-h2-font-color="base(dark.primary) base:hover(primary) base:dark(lighter.primary) base:dark:hover(white)"
+                    {% else %}
+                      data-h2-font-color="base:hover(primary) base:dark:hover(lighter.primary)"
+                    {% endif %}>{{ item.label }}</a>
+                </li>
+              {% endfor %}
+            {% else %}
+              {% set currentKey = eleventyNavigation.key %}
+              {% set navPages = collections.all | eleventyNavigationBreadcrumb(currentKey, { includeSelf: true }) %}
+              {% for item in navPages %}
+                {% if loop.last == true %}
+                  <li
+                    data-h2-margin="base(0,x.5,0,0)" 
+                    data-h2-display="base(inline-block)">
+                    <a 
+                      href="{{ item.url }}"
+                      title=""
+                      data-h2-font-weight="base(800)"
+                      data-h2-text-decoration="base(none)"
+                      data-h2-font-color="base(dark.primary) base:hover(primary) base:dark(lighter.primary) base:dark:hover(white)">{{ item.key }}</a>
+                  </li>
+                {% else %}
+                <li
+                  data-h2-margin="base(0,x.5,0,0)" 
+                  data-h2-display="base(inline-block)">
+                  <a 
+                    href="{{ item.url }}"
+                    title=""
+                    data-h2-font-color="base:hover(primary) base:dark:hover(lighter.primary)">{{ item.key }}</a>
+                </li>
+                <li
+                  data-h2-margin="base(0,x.5,0,0)" 
+                  data-h2-display="base(inline-block)"><span>/</span>
+                </li>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          <ul>
+        </div>
+        <div
+          data-h2-text-align="l-tablet(right)" 
+          data-h2-flex-item="base(content)">
+          <ul data-h2-padding="base(0)">
+            <li data-h2-display="base(inline-block)">
+              <span>version <strong data-h2-font-weight="base(800)" data-h2-font-color="base(dark.primary) base:dark(lighter.primary)">2.0.0</strong></span>
+            </li>
+            <li data-h2-display="base(inline-block)">
+              {% include "components/theme-switcher.njk" %}
+            </li>
+            {# loop though site.languages #}
+            {% for lgg in site.languages %}
+              {# set translatedUrl to the homepage of that language by default #}
+              {% set translatedUrl = "/" + lgg.code + "/" %}
+              {# set current language class #}
+              {% set activeClass = "is-active" if lgg.code == locale else "" %}
+              {# loop through all the content of the site #}
+              {% for item in collections.all %}
+                {# for each item in the loop, check if
+                - its translationKey matches the current item translationKey
+                - its locale matches the code of the language we are looping through #}
+                {% if item.data.key == key and item.data.locale == lgg.code %}
+                  {% set translatedUrl = item.url %}
+                {% endif %}
+              {% endfor %}
+              <li 
+                class="c-lggnav__item {{ activeClass }}"
+                data-h2-margin="base(0,0,0,x1)" 
+                data-h2-display="base(inline-block)">
+                <a 
+                  class="c-lggnav__link" 
+                  href="{{ translatedUrl }}"
+                  data-h2-font-color="base:hover(primary) base:dark:hover(lighter.primary)">{{ lgg.label }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>

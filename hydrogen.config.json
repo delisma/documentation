@@ -1,82 +1,251 @@
 {
-  "debug": false,
-  "mediaWarnings": true,
-  "folders": {
-    "markup": [
-      "_attributes",
-      "_layouts",
-      "_includes"
-    ],
-    "scripts": "assets/scripts",
-    "styles": "assets/styles"
+  "info": {
+    "docs": "https://beta.hydrogen.design",
+    "settings": "https://beta.hydrogen.design/settings",
+    "code": "https://github.com/hydrogen-design-system/hydrogen",
+    "roadmap": "https://github.com/orgs/hydrogen-design-system/projects/1"
   },
+  "debug": false,
+  "input": [
+    "src/_includes"
+  ],
+  "output": "_site/static/css",
+  "variables": true,
+  "reset_styles": true,
+  "dark_mode": "toggle",
   "colors": [
     {
       "key": "white",
-      "color": "rgb(255, 255, 255)",
-      "opacity": false
+      "color": "rgba(255, 255, 255, 1)",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
     },
     {
       "key": "black",
-      "color": "rgb(10, 10, 20)",
-      "opacity": false
+      "color": "#212130",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
+    },
+    {
+      "key": "primary",
+      "color": "#9D5CFF",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
+    },
+    {
+      "key": "accent",
+      "color": "#53FFE0",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
+    },
+    {
+      "key": "focus",
+      "color": "#fbce3a",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
+    },
+    {
+      "key": "code",
+      "color": "rgba(50, 50, 65, 1)",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
     },
     {
       "key": "font",
-      "color": "rgb(50, 50, 50)",
-      "opacity": false
-    },
-    {
-      "key": "theme-1",
-      "color": "#9D5CFF",
-      "opacity": true
-    },
-    {
-      "key": "theme-2",
-      "color": "#FF5C6D",
-      "opacity": false
-    },
-    {
-      "key": "theme-3",
-      "color": "#BEFF5C",
-      "opacity": false
-    },
-    {
-      "key": "theme-4",
-      "color": "#5CFFEE",
-      "opacity": false
-    },
-    {
-      "key": "theme-5",
-      "color": "#F7B452",
-      "opacity": false
+      "color": "#53FFE0",
+      "scale": {
+        "light": "#ccccdb",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "#2a2b38",
+        "darker": "auto",
+        "darkest": "auto"
+      }
     }
   ],
-  "flexgrid": {
-    "enabled": true,
-    "columns": 8
-  },
+  "containers": [
+    {
+      "key": "small",
+      "max_width": "39rem"
+    },
+    {
+      "key": "medium",
+      "max_width": "75rem"
+    },
+    {
+      "key": "large",
+      "max_width": "90rem"
+    }
+  ],
   "fonts": [
     {
-      "key": "Gibson",
-      "loadType": "webfont",
-      "value": "canada-type-gibson, sans-serif"
+      "key": "sans",
+      "family": "'Inter', sans-serif"
+    },
+    {
+      "key": "serif",
+      "family": "serif"
+    },
+    {
+      "key": "script",
+      "family": "script"
+    },
+    {
+      "key": "mono",
+      "family": "monospace"
     }
   ],
   "gradients": [
     {
-      "type": "linear",
-      "angle": "135deg",
-      "colorStops": [
-        {
-          "key": "1",
-          "color": "#9D5CFF"
-        },
-        {
-          "key": "2",
-          "color": "#FF5C6D"
-        }
-      ]
+      "key": "divider",
+      "gradient": "linear-gradient(90deg, #53FFE0, #9D5CFF)",
+      "fallback": "#53FFE0"
+    },
+    {
+      "key": "primaryRadial",
+      "gradient": "radial-gradient(rgba(157,92,255, 1), rgba(42, 44, 61, 1))",
+      "fallback": "rgba(157,92,255, 1)"
+    },
+    {
+      "key": "accentRadial",
+      "gradient": "radial-gradient(rgba(83, 255, 224, 1), rgba(42, 44, 61, 1))",
+      "fallback": "rgba(83, 255, 224, 1)"
+    }
+  ],
+  "media": [
+    {
+      "key": "base",
+      "query": null
+    },
+    {
+      "key": "print",
+      "query": "print"
+    },
+    {
+      "key": "p-tablet",
+      "query": "screen and (min-width: 48em)"
+    },
+    {
+      "key": "l-tablet",
+      "query": "screen and (min-width: 73em)"
+    },
+    {
+      "key": "laptop",
+      "query": "screen and (min-width: 80em)"
+    },
+    {
+      "key": "desktop",
+      "query": "screen and (min-width: 100em)"
+    }
+  ],
+  "radius": [
+    {
+      "key": "code",
+      "radius": "5px"
+    },
+    {
+      "key": "rounded",
+      "radius": "10px"
+    },
+    {
+      "key": "pill",
+      "radius": "50rem"
+    },
+    {
+      "key": "circle",
+      "radius": "100%"
+    }
+  ],
+  "shadows": [
+    {
+      "key": "xs",
+      "shadow": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "s",
+      "shadow": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "m",
+      "shadow": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "l",
+      "shadow": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "xl",
+      "shadow": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2)"
+    }
+  ],
+  "transitions": {
+    "durations": [
+      {
+        "key": "default",
+        "duration": ".2s"
+      }
+    ],
+    "functions": [
+      {
+        "key": "ease",
+        "function": "ease"
+      }
+    ],
+    "delays": [
+      {
+        "key": "none",
+        "delay": "0s"
+      }
+    ]
+  },
+  "typography": [
+    {
+      "query_key": "base",
+      "size": "100%",
+      "line_height": "1.4",
+      "type_scale": "1.2"
+    },
+    {
+      "query_key": "desktop",
+      "size": "112.5%",
+      "line_height": "1.4",
+      "type_scale": "1.2"
     }
   ]
 }

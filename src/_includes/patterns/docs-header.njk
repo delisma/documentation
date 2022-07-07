@@ -1,0 +1,97 @@
+<div 
+  id="docs_header"
+  data-h2-padding="base(x2, 0, x3, 0) l-tablet(x3, 0, x4, 0) desktop(x4, 0, x5, 0)"
+  data-h2-layer="base(2, relative)">
+  <div data-h2-layer="base(2, relative)">
+    <div
+      data-h2-text-align="base(center) p-tablet(left)" 
+      data-h2-flex-grid="base(flex-start, 0, x1) p-tablet(center, 0, x2)">
+      <div data-h2-flex-item="base(1of1) p-tablet(content)">
+        {% if key === "docs" %}
+          <img 
+            src="/static/img/icon-robot.svg" 
+            alt="" 
+            data-h2-width="base(15%) p-tablet(x3)"
+            data-h2-display="base(inline-block)"
+            data-h2-margin="l-tablet(5px, 0, 0, 0)"
+            class="section-icon">
+        {% else %}
+          <img 
+            src="/static/img/icon-gear.svg" 
+            alt="" 
+            data-h2-width="base(15%) p-tablet(x3)"
+            data-h2-display="base(inline-block)"
+            data-h2-margin="l-tablet(5px, 0, 0, 0)"
+            class="section-icon">
+        {% endif %}
+      </div> 
+      <div data-h2-flex-item="base(1of1) p-tablet(fill)">
+        <h2
+          data-h2-font-color="base(white)"
+          data-h2-margin="base(0)"
+          data-h2-font-weight="base(700)">
+            {% if key === "docs" %}
+              {{ header_title }}
+            {% else %}
+              {{ title }}
+            {% endif %}
+          </h2>
+      </div>
+    </div>
+    <div data-h2-padding="base(x1, 0, 0, 0) l-tablet(x2, 0, 0, 0)">
+      {% if key === "docs" %}
+        <div data-h2-flex-grid="base(flex-start, 0, x2, x1)">
+          {% for item in header_index %}
+            <div data-h2-flex-item="base(1of2)">
+              <div data-h2-flex-grid="base(flex-start, 0, x2, 0)">
+                <div
+                  data-h2-display="base(none) p-tablet(block)" 
+                  data-h2-flex-item="base(content)">
+                  <div
+                    data-h2-width="p-tablet(x3)"
+                    data-h2-height="base(x.25)"
+                    data-h2-margin="p-tablet(0.6rem, auto, 0, auto) l-tablet(0.7rem, auto, 0, auto)"
+                    data-h2-bg-color="base(accent)"
+                    data-h2-radius="base(pill)"></div>
+                </div>
+                <div data-h2-flex-item="base(1of1) p-tablet(fill)">
+                  <p
+                    data-h2-font-size="base(h6, 1.3)"
+                    data-h2-font-weight="base(200)"
+                    data-h2-font-color="base(white)"
+                    data-h2-text-align="base(center) p-tablet(left)">
+                    <a
+                      href="{{ item.link }}"
+                      title="{{ item.title }}"
+                      data-h2-color="base:hover(lighter.primary)">{{ item.content }}
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div data-h2-flex-grid="base(flex-start, 0, x2, 0)">
+          <div
+            data-h2-display="base(none) p-tablet(block)" 
+            data-h2-flex-item="base(content)">
+            <div
+              data-h2-width="p-tablet(x3)"
+              data-h2-height="base(x.25)"
+              data-h2-margin="p-tablet(0.6rem, auto, 0, auto) l-tablet(0.7rem, auto, 0, auto)"
+              data-h2-bg-color="base(accent)"
+              data-h2-radius="base(pill)"></div>
+          </div>
+          <div data-h2-flex-item="base(1of1) p-tablet(fill)">
+            <p
+              data-h2-font-size="base(h6, 1.3)"
+              data-h2-font-weight="base(200)"
+              data-h2-font-color="base(white)"
+              data-h2-text-align="base(center) p-tablet(left)">{{ subtitle }}</p>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+{
+  "layout": "attribute.njk",
+  "permalink": "/{{ locale }}/docs/{{ site[locale].postNames.attributes }}/{{ page.fileSlug }}/index.html"
+}
