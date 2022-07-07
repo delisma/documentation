@@ -4,7 +4,7 @@
   <a data-h2-color="base(dark.font) base:hover(primary) base:dark(light.font)" data-h2-transition="base:hover(color, .2s, ease, 0s)"
 {% endset %}
 
-<div data-h2-flex-grid="base(flex-start, 0, x2, x1)">
+<div data-h2-flex-grid="base(stretch, 0, x1) l-tablet(stretch, 0, x3, x1) desktop(stretch, 0, x4, x1)">
   {% for content in section.content %}
     {% if content.type == 'index' %}
       {% for section in section.sections %}
@@ -83,6 +83,8 @@
       {% endif %}
     {% elseif content.type == "code" %}
       {% include "components/docs-content-code.njk" %}
+    {% elseif content.type == "syntax" %}
+      {% include "components/docs-syntax.njk" %}
     {% elseif content.type == "group" %}
       <div data-h2-flex-grid="base(flex-start, 0, x1)">
         {% for content in content.items %}

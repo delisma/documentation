@@ -29,13 +29,10 @@ prism: true
       <div
         data-h2-position="base(relative)" 
         data-h2-flex-item="base(1of1) l-tablet(content)"
-        data-h2-display="base(none) l-tablet(block)"
-        data-h2-order="l-tablet(2)">
+        data-h2-display="base(none) l-tablet(block)">
         {% include "patterns/docs-menu.njk" %}
       </div>
-      <div
-        data-h2-order="base(1)" 
-        data-h2-flex-item="base(1of1) l-tablet(fill)">
+      <div data-h2-flex-item="base(1of1) l-tablet(fill)">
         {{ content | safe }}
       </div>
     </div>

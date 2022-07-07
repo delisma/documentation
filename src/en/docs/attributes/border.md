@@ -4,12 +4,83 @@ eleventyNavigation:
   key: Borders
   parent: Attributes
 title: Borders
-summary: This attribute applies a border to one or more sides of an element.
+subtitle: This attribute applies a border to one or more sides of an element.
+sections:
+  - title:
+      text: Syntax
+      id: syntax
+    content:
+      - type: copy
+        width: full
+        items:
+          - Borders are set using the <code>data-h2-border</code> attribute and accepts 1, 2, or 4 options.
+    sections:
+      - title:
+          text: Standard options
+          id: standard
+        content:
+          - type: code
+            width: full
+            file: index.html
+            items:
+              - data-h2-border="media(side, width, style, color)"
+          - type: syntax
+            key: side
+            required: true
+          - type: syntax
+            key: width
+            required: true
+          - type: syntax
+            key: style
+            required: true
+          - type: syntax
+            key: color
+            required: true
+      - title:
+          text: Reset option
+          id: reset
+        content:
+          - type: code
+            width: full
+            file: index.html
+            items:
+              - data-h2-border="media(none)"
+          - type: syntax
+            width: full
+            key: none_border
+            required: true
+      - title:
+          text: CSS option
+          id: css
+        content:
+          - type: code
+            width: full
+            file: index.html
+            items:
+              - data-h2-border="media(side, css)"
+          - type: syntax
+            key: side
+            required: true
+          - type: syntax
+            key: css_border
+            required: true
+examples:
+  state: false
+  sections:
+    - title:
+        text: Examples
+        id: examples
+      content:
+        - type: copy
+          width: full
+          items:
+            - Below are a few examples of <code>border</code> in action.
+
 syntaxSummary: Borders are set using the <strong>data-h2-border</strong> attribute which accepts 2 or 4 values.
 syntax:
   - code: data-h2-border="media(side, width, style, color)"
     label: Standard values
-    description: "The standard 4 value syntax requires the following:"
+    description: 'The standard 4 value syntax requires the following:'
     values:
       - key: Side
         required: true
@@ -42,11 +113,11 @@ syntax:
         required: true
         keys: true
         css: true
-        description: 
+        description:
         examples:
   - code: data-h2-border="media(side, css)"
     label: Alternative values
-    description: "The alternative 2 value syntax allows you to specify a side and apply a CSS border value. It requires the following values:"
+    description: 'The alternative 2 value syntax allows you to specify a side and apply a CSS border value. It requires the following values:'
     values:
       - key: Side
         required: true
@@ -68,6 +139,5 @@ syntax:
         description: This option allows you to define the border's styles using standard CSS syntax. Note that color keys and space multipliers do not work using this approach.
         examples:
           - 1px solid black
-          - ".5rem dashed #FF0000"
-examples: false
+          - '.5rem dashed #FF0000'
 ---

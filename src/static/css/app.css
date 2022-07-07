@@ -49,40 +49,40 @@ pre code {
 }
 
 #switcher.light #highlight {
-  transform: translate(114%, 0);
+  transform: translate(117%, 0);
 }
 
 #switcher.dark {
 }
 
 #switcher.dark #highlight {
-  transform: translate(227%, 0);
+  transform: translate(234%, 0);
 }
 
 #icon_pref * {
-  fill: var(--h2-color-dark-primary);
+  fill: var(--h2-color-lightest-primary);
   transition: fill 0.2s linear 0s;
 }
 
 @media screen and (prefers-color-scheme: dark) {
   #icon_pref * {
-    fill: var(--h2-color-lighter-primary);
+    fill: var(--h2-color-dark-primary);
     transition: fill 0.2s linear 0s;
   }
 }
 
 #icon_sun * {
-  fill: #83838b;
+  fill: var(--h2-color-lighter-black);
   transition: fill 0.2s linear 0s;
 }
 
 #icon_moon * {
-  fill: #83838b;
+  fill: var(--h2-color-lighter-black);
   transition: fill 0.2s linear 0s;
 }
 
 #switcher.light #icon_pref * {
-  fill: #83838b;
+  fill: var(--h2-color-lighter-black);
   transition: fill 0.2s linear 0s;
 }
 
@@ -91,17 +91,17 @@ pre code {
 }
 
 #switcher.light #icon_sun * {
-  fill: var(--h2-color-dark-primary);
+  fill: var(--h2-color-lightest-primary);
   transition: fill 0.2s linear 0s;
 }
 
 #switcher.dark #icon_pref * {
-  fill: #83838b;
+  fill: var(--h2-color-lighter-black);
   transition: fill 0.2s linear 0s;
 }
 
 #switcher.dark #icon_moon * {
-  fill: var(--h2-color-lighter-primary);
+  fill: var(--h2-color-dark-primary);
   transition: fill 0.2s linear 0s;
 }
 

@@ -1,0 +1,47 @@
+<div data-h2-margin="base(x3, 0, 0, 0) p-tablet(x4, 0, 0, 0)">
+  <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)">
+    {% for section in features %}
+      {% include "components/home-content-h2.njk" %}
+      {% for section in section.sections %}
+        <div data-h2-margin="base(x2, auto, 0, auto)">
+          <div data-h2-flex-grid="base(flex-start, 0, x1) p-tablet(flex-start, 0, x2)">
+            <div data-h2-flex-item="base(1of1) p-tablet(content)">
+              <div
+                data-h2-width="base(25%) p-tablet(x3)"
+                data-h2-height="base(x.25)"
+                data-h2-margin="
+                  base(0, auto) 
+                  p-tablet(.4rem, auto, 0, auto)"
+                data-h2-bg-color="base(primary) base:dark(accent)"
+                data-h2-radius="base(pill)">
+              </div>
+            </div>
+            <div data-h2-flex-item="base(1of1) p-tablet(fill)">
+              {% include "components/home-content-h3.njk" %}
+              {% include "components/docs-content-loop.njk" %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endfor %}
+    <div data-h2-margin="base(x3, 0, 0, 0) l-tablet(x4, 0, 0, 0)">
+      <div data-h2-flex-grid="base(flex-start, 0, x2)">
+        {% for item in subfeatures %}
+          <div data-h2-flex-item="base(1of1) l-tablet(1of2) laptop(1of4)">
+            <p data-h2-font-weight="base(700)">{{ item.label }}</p>
+            {% for item in item.content %}
+              <p data-h2-margin="base(x.5, auto, auto, auto)">
+                {{ item | safe }}
+              </p>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <hr
+      data-h2-height="base(1px)"
+      data-h2-border="base(all, 0px, solid, transparent)"
+      data-h2-background-color="base(lightest.black)" 
+      data-h2-margin="base(x3, 0) desktop(x4, 0)"/>
+  </div>
+</div>

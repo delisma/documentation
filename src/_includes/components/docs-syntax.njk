@@ -1,0 +1,68 @@
+{% for item in syntax[locale] %}
+  {% if content.key == item.key %}
+    <div
+      data-h2-background-color="base(white)"
+      data-h2-padding="base(x1) p-tablet(x2)"
+      data-h2-height="base(100%)"
+      data-h2-radius="base(rounded)"
+      data-h2-shadow="base(m)">
+      <h5
+        data-h2-font-weight="base(700)"
+        data-h2-margin="base(0, 0, x.25, 0)">{{ item.title }}</h5>
+      <ul
+        data-h2-list-style="base(none)"
+        data-h2-padding="base(0)">
+        {% if content.required == true %}
+          <li
+            data-h2-display="base(inline)"
+            data-h2-font-size="base(caption)"
+            data-h2-color="base(dark.primary)"
+            data-h2-font-weight="base(700)"
+            data-h2-margin="base(0, x.5, 0, 0)">REQUIRED</li>
+        {% endif %}
+        {% if item.keys == true and item.css == false %}
+          <li
+            data-h2-display="base(inline)"
+            data-h2-font-size="base(caption)"
+            data-h2-color="base(dark.primary)"
+            data-h2-font-weight="base(700)"
+            data-h2-margin="base(0, x.5, 0, 0)">KEYS ONLY</li>
+        {% elseif item.keys == false and item.css == true %}
+          <li
+            data-h2-display="base(inline)"
+            data-h2-font-size="base(caption)"
+            data-h2-color="base(dark.primary)"
+            data-h2-font-weight="base(700)"
+            data-h2-margin="base(0, x.5, 0, 0)">CSS ONLY</li>
+        {% elseif item.keys == true and item.css == true %}
+          <li
+            data-h2-display="base(inline)"
+            data-h2-font-size="base(caption)"
+            data-h2-color="base(dark.primary)"
+            data-h2-font-weight="base(700)"
+            data-h2-margin="base(0, x.5, 0, 0)">KEYS AND CSS</li>
+        {% endif %}
+      </ul>
+      <p data-h2-margin="base(x1, 0)">{{ item.description | safe }}</p>
+      {% for example in item.examples %}
+        <p 
+          data-h2-margin="base(x1, 0, x.5, 0)"
+          data-h2-font-weight="base(700)">{{ example.label }}</p>
+        <ul
+          data-h2-list-style="base(none)"
+          data-h2-padding="base(0)">
+          {% for item in example.items %}
+            <li
+              data-h2-background-color="base(black.1)"
+              data-h2-border="base(all, 1px, solid, black)"
+              data-h2-padding="base(x.25, x1)"
+              data-h2-display="base(inline-block)"
+              data-h2-font-size="base(caption)"
+              data-h2-margin="base(0, x.1, x.25, 0)"
+              data-h2-radius="base(pill)">{{ item }}</li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}

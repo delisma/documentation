@@ -1,22 +1,7 @@
 ---
-layout: base.njk
-prism: true
+layout: patterns/docs-layout.njk
 ---
-
-{% include "patterns/docs-breadcrumbs.njk" %}
-<div data-h2-padding="base(0, x1) l-tablet(0, x5)">
-  <div data-h2-flex-grid="base(stretch, 0, x4)">
-    <div 
-      data-h2-position="base(relative)" 
-      data-h2-flex-item="l-tablet(2of5) laptop(2of7)" 
-      data-h2-order="l-tablet(2)">
-      {% include "patterns/docs-menu.njk" %}
-    </div>
-    <div 
-      data-h2-order="base(1)" 
-      data-h2-flex-item="l-tablet(3of5) laptop(5of7)">
-      {% include "attribute-index-home.njk" %}
-    </div>
-  </div>
+{% include "patterns/docs-header.njk" %}
+<div id="main">
+  {% include "patterns/docs-attribute-categories.njk" %}
 </div>
-{% include "patterns/docs-footer.njk" %}

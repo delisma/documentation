@@ -33,13 +33,13 @@
   <div data-h2-flex-grid="base(flex-start, 0, x1, 0)">
     <div data-h2-flex-item="base(content)">
       <pre
-        data-h2-padding="base(x.5, 0, x.5, x1)"
+        data-h2-padding="base(x.75, 0, x.75, x1)"
         data-h2-overflow="base(auto, x)"
         data-h2-margin="base(0)"><code>{% set lineCount = 0 %}{% for item in content.items %}{% set lineCount = lineCount + 1 %}<span data-h2-color="base(lighter.code)">{{ lineCount }}</span><br>{% endfor %}</code></pre>
     </div>
     <div data-h2-flex-item="base(fill)">
       <pre
-        data-h2-padding="base(x.5, 0)"
+        data-h2-padding="base(x.75, 0)"
         data-h2-overflow="base(auto, x)"
         data-h2-margin="base(0)"><code>{% for item in content.items %}{{ item }}<br>{% endfor %}</code></pre>
     </div>

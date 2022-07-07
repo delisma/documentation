@@ -57,6 +57,7 @@ sections:
       - type: code
         file: index.html
         items:
+          - '<!DOCTYPE html>'
           - '<html data-h2>'
           - '  <head>'
           - '    ...'

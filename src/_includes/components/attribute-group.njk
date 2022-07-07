@@ -1,0 +1,16 @@
+{% set propertyCollection = collections["attributes_" + locale + "_asc"] %}
+{% for prop in propertyCollection %}
+  {% for item in attributes[locale] %}
+    {% if prop.data.key == item.key %}
+      {% if item.group == section.title.id %}
+        <li data-h2-margin="base(auto, auto, x.5, auto)">
+          <a
+            href="{{ prop.url | url }}"
+            title="{{ item.linkTitle }}"
+            data-h2-color="base(dark.font) base:hover(primary) base:dark(light.font) base:dark:hover(lighter.primary)">{{ item.title }}</a><br>
+          {{ prop.data.subtitle }}
+        </li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

@@ -1,7 +1,13 @@
 <div
-  data-h2-layer="base(3,relative)"
   data-h2-bg-color="base(white) base:dark(dark.font)"
-  data-h2-padding="base(x1, 0) l-tablet(x.5, 0)">
+  data-h2-padding="base(x1, 0) l-tablet(x.5, 0)"
+  {% if key === "home" %} 
+    data-h2-layer="base(3, sticky)"
+    data-h2-offset="base(0, auto, auto, auto)"
+    data-h2-shadow="base(xl)"
+  {% else %}
+    data-h2-layer="base(3, relative)"
+  {% endif %}>
   <div
     {% if key === "home" %} 
       data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)"

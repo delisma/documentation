@@ -1,7 +1,7 @@
 {% for section in sections %}
   <div data-h2-margin="base(x3, auto, 0, auto) laptop(x4, auto, 0, auto)">
     <div data-h2-flex-grid="base(flex-start, 0, x2, 0)">
-      <div data-h2-flex-item="base(1of1) p-tablet(content)">
+      {# <div data-h2-flex-item="base(1of1) p-tablet(content)">
         <div
           data-h2-width="base(25%) p-tablet(x3)"
           data-h2-height="base(x.25)"
@@ -13,7 +13,7 @@
           data-h2-bg-color="base(primary) base:dark(accent)"
           data-h2-radius="base(pill)">
         </div>
-      </div>
+      </div> #}
       <div data-h2-flex-item="base(1of1) p-tablet(fill)">
         {% if section.title %}
           {% include "components/docs-content-h3.njk" %}
@@ -61,12 +61,12 @@
 
 {% if steps %}
   <div data-h2-margin="base(x2, auto, 0, auto)">
-    <div data-h2-flex-grid="base(flex-start, 0, x2, 0)">
+    {# <div data-h2-flex-grid="base(flex-start, 0, x2, 0)">
       <div
         data-h2-display="base(none) p-tablet(block)" 
         data-h2-flex-item="base(1of1) p-tablet(content)">
         <div data-h2-width="base(25%) p-tablet(x3)" data-h2-height="base(0px)"></div>
-      </div>
+      </div> #}
       <div data-h2-flex-item="base(1of1) p-tablet(fill)">
         <hr
           data-h2-height="base(1px)"

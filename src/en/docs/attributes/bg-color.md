@@ -4,24 +4,41 @@ eleventyNavigation:
   key: Background colors
   parent: Attributes
 title: Background color
-summary: This attribute sets a color or gradient as an element’s background value.
-syntaxSummary: Background colors are set using the <strong>data-h2-background-color</strong> attribute which accepts 1 value.
-syntax:
-  - code: data-h2-background-color="media(color/gradient)"
-    label: Standard values
-    description: 'The standard syntax requires the following:'
-    values:
-      - key: Color/gradient
-        required: true
-        keys: true
-        css: true
-        description:
-        examples:
-          - primary
-          - accent
-          - rgba(40, 30, 60)
-          - '#4d2680'
-examples: true
+subtitle: This attribute sets a color or gradient as an element’s background value.
+sections:
+  - title:
+      text: Syntax
+      id: syntax
+    content:
+      - type: copy
+        width: full
+        items:
+          - Background colors are set using the <code>data-h2-background-color</code> attribute and accepts 1 option.
+    sections:
+      - title:
+          text: Standard option
+          id: standard
+        content:
+          - type: code
+            width: full
+            file: index.html
+            items:
+              - data-h2-background-color="media(color/gradient)"
+          - type: syntax
+            key: color_gradient
+            width: full
+            required: true
+examples:
+  state: false
+  sections:
+    - title:
+        text: Examples
+        id: examples
+      content:
+        - type: copy
+          width: full
+          items:
+            - Below are a few examples of <code>background-color</code> in action.
 ---
 
 {% include "examples/bg-color.njk" %}
